@@ -3,6 +3,5 @@ description: UI/UX Designer based in Japan
 url: "https://siry7.github.io"
 baseurl: ""
 permalink: pretty
-
 plugins:
   - jekyll-seo-tag
