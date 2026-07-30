@@ -126,3 +126,25 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16p
   display:block;
   opacity:.9;
 }
+
+/* ── image normalization: all images full column width, natural ratio ── */
+.hero-img,
+.full-img{
+  width:100%;
+  aspect-ratio:auto;
+  height:auto;
+  border-radius:8px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  margin:0 0 1.5rem;
+  display:block;
+  background:transparent;
+}
+.hero-img img,
+.full-img img{
+  width:100%;
+  height:auto;
+  object-fit:unset;
+  display:block;
+  opacity:.9;
+}
