@@ -16,7 +16,7 @@ title: Ajaib — Day Trading Feature
 </div>
 
 <div class="hero-img">
-  <img src="https://framerusercontent.com/images/RgKnu7WXJ5eEcrAZ1NsWQaHgNGI.png" alt="Ajaib day trading hero" />
+  <img src="{{ '/assets/images/ajaib-hero.png' | relative_url }}" alt="Ajaib day trading hero" />
 </div>
 
 <span class="section-label">Overview</span>
@@ -31,30 +31,63 @@ title: Ajaib — Day Trading Feature
 
 <div class="divider"></div>
 
-<p class="chapter">Quick context — margin vs. day trading</p>
+<span class="section-label">Key Screens</span>
+
+<div class="carousel-wrap">
+  <div class="carousel-tabs">
+    <button class="ctab active" data-i="0">Screen 1</button>
+    <button class="ctab" data-i="1">Screen 2</button>
+    <button class="ctab" data-i="2">Screen 3</button>
+    <button class="ctab" data-i="3">Screen 4</button>
+  </div>
+  <div class="carousel-track-outer" id="outer">
+    <div class="carousel-track" id="track">
+      <div class="phone-frame active" data-i="0">
+        <div class="phone-inner">
+          <div class="phone-notch"></div>
+          <img src="{{ '/assets/images/ajaib-screen-1.svg' | relative_url }}" alt="Screen 1" />
+        </div>
+      </div>
+      <div class="phone-frame" data-i="1">
+        <div class="phone-inner">
+          <div class="phone-notch"></div>
+          <img src="{{ '/assets/images/ajaib-screen-2.svg' | relative_url }}" alt="Screen 2" />
+        </div>
+      </div>
+      <div class="phone-frame" data-i="2">
+        <div class="phone-inner">
+          <div class="phone-notch"></div>
+          <img src="{{ '/assets/images/ajaib-screen-3.svg' | relative_url }}" alt="Screen 3" />
+        </div>
+      </div>
+      <div class="phone-frame" data-i="3">
+        <div class="phone-inner">
+          <div class="phone-notch"></div>
+          <img src="{{ '/assets/images/ajaib-screen-4.svg' | relative_url }}" alt="Screen 4" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<span class="chapter">Quick context — margin vs. day trading</span>
 <p class="body-text">Margin trading lets users borrow money from the brokerage to buy more stocks than they could with their own money. Day trading is similar, but users can only hold stocks until end of market hours — with bigger leverage. If users haven't sold by close, we force-sell at market price.</p>
 <p class="body-text">Day trading also has a much lower barrier to entry: you need around $12,200 to access margin trading, while any deposit amount unlocks day trading directly.</p>
 
-<div class="full-img">
-  <img src="https://framerusercontent.com/images/Cv33TEFD3l8HH7ooGFNNfWCEU.png" alt="Margin vs day trading" />
-</div>
-<div class="full-img">
-  <img src="https://framerusercontent.com/images/thtnuZ862QPwR31dyPdkjWHRZg.png" alt="Day trading difference" />
-</div>
+<div class="full-img"><img src="{{ '/assets/images/ajaib-margin.png' | relative_url }}" alt="Margin vs day trading" /></div>
+<div class="full-img"><img src="{{ '/assets/images/ajaib-difference.png' | relative_url }}" alt="Day trading difference" /></div>
 
 <div class="divider"></div>
 
 <span class="section-label">Chapter 1 — Product Foundations</span>
 <p class="body-text">Having leverage without a massive deposit and no loan fees sounds great — but what's the catch? The team aligned on core product fundamentals before any design work began.</p>
 
-<div class="full-img">
-  <img src="https://framerusercontent.com/images/oVqvahXtcWeuDrTfCikcMbMOUvI.png" alt="Product foundations" />
-</div>
-<div class="full-img">
-  <img src="https://framerusercontent.com/images/pqDGI5g8FN4QjTJxxtrQXzp6b0.png" alt="Product overview" />
-</div>
+<div class="full-img"><img src="{{ '/assets/images/ajaib-foundations.png' | relative_url }}" alt="Product foundations" /></div>
+<div class="full-img"><img src="{{ '/assets/images/ajaib-overview.png' | relative_url }}" alt="Product overview" /></div>
 
-<p class="chapter">Market research & concept testing</p>
+<span class="chapter">Market research & concept testing</span>
 <p class="body-text">We identified that 25.7–34.2% of our user base matched the target criteria. We invited them for interviews and concept testing. While the core concept tested smoothly, users had lingering doubts:</p>
 <ul class="case-list">
   <li>Is this a loan? I don't want to use a loan to trade.</li>
@@ -62,38 +95,28 @@ title: Ajaib — Day Trading Feature
   <li>Does this mean I can also get a bigger loss?</li>
 </ul>
 
-<div class="full-img">
-  <img src="https://framerusercontent.com/images/pgYxwuLoqpsOiDDgtsKeNbVZw.png" alt="Market research" />
-</div>
+<div class="full-img"><img src="{{ '/assets/images/ajaib-research.png' | relative_url }}" alt="Market research" /></div>
 
-<p class="chapter">Risk management reframe</p>
-<p class="body-text">We reframed force-sell as a risk management mechanism, not a downside. We communicated clearly that no fees are charged for the leverage, and we were explicitly forbidden to use the word "Loan" in any copy.</p>
+<span class="chapter">Risk management reframe</span>
+<p class="body-text">We reframed force-sell as a risk management mechanism, not a downside. No fees are charged for leverage, and we were explicitly forbidden to use the word "Loan" anywhere in the product.</p>
 
-<div class="full-img">
-  <img src="https://framerusercontent.com/images/C2NoBTP4schc2JjeDFNTPCsqNs.png" alt="Risk management onboarding" />
-</div>
+<div class="full-img"><img src="{{ '/assets/images/ajaib-reframe.png' | relative_url }}" alt="Risk management" /></div>
 
 <div class="divider"></div>
 
 <span class="section-label">Chapter 2 — Haircut Value & Multiplier</span>
-<p class="body-text">Haircut value is our internal term for stock risk — higher-risk stocks have a higher haircut value, reducing buying power more. The problem: this information was confidential. We couldn't explain to users why their buying power dropped.</p>
+<p class="body-text">Haircut value is our internal term for stock risk — higher-risk stocks reduce buying power more. The problem: this data was confidential. We couldn't explain to users why their buying power dropped.</p>
 
-<div class="full-img">
-  <img src="https://framerusercontent.com/images/AzxitHEwZsKdoXHpoz7k71C7N6k.png" alt="Haircut value" />
-</div>
+<div class="full-img"><img src="{{ '/assets/images/ajaib-haircut.png' | relative_url }}" alt="Haircut value" /></div>
 
 <div class="callout"><p>I proposed replacing the haircut value concept with a multiplier system. Safer stocks = 5x buying power. More volatile stocks = 2x–4x. This made risk immediately readable — and turned high-multiplier stocks into desirable trading targets.</p></div>
 
-<div class="full-img">
-  <img src="https://framerusercontent.com/images/0zvJtVbx56jJ2Nom8xj9aJHkzWE.png" alt="Multiplier system" />
-</div>
+<div class="full-img"><img src="{{ '/assets/images/ajaib-multiplier.png' | relative_url }}" alt="Multiplier system" /></div>
 
-<p class="chapter">Fish tank method — gradual rollout</p>
-<p class="body-text">Like not throwing a fish directly into new tank water, we introduced the multiplier gradually — starting only with 5x on low-risk blue-chip stocks. Users quickly asked for more volatile stocks. We expanded with no reported complaints.</p>
+<span class="chapter">Fish tank method — gradual rollout</span>
+<p class="body-text">Like not throwing a fish directly into new tank water, we launched only with 5x on low-risk blue-chip stocks first. Users quickly asked for more volatile stocks. We expanded with no reported complaints.</p>
 
-<div class="full-img">
-  <img src="https://framerusercontent.com/images/8uG6hRazzz4xoKmnPYGPW2lTmA.png" alt="Gradual rollout" />
-</div>
+<div class="full-img"><img src="{{ '/assets/images/ajaib-rollout.png' | relative_url }}" alt="Gradual rollout" /></div>
 
 <div class="divider"></div>
 
@@ -105,23 +128,17 @@ title: Ajaib — Day Trading Feature
   <li>Unnecessary account verification steps adding friction</li>
 </ul>
 
-<div class="full-img">
-  <img src="https://framerusercontent.com/images/JLeXbrjJAdCopfVoQZRh8Pa8w.png" alt="Onboarding before" />
-</div>
+<div class="full-img"><img src="{{ '/assets/images/ajaib-onboarding-before.png' | relative_url }}" alt="Onboarding before" /></div>
 
-<p class="body-text">We iterated fast — made onboarding instant, rewrote the copy, and folded all agreements into the main T&C, eliminating the verification steps entirely for new users.</p>
+<p class="body-text">We iterated fast — made onboarding instant, rewrote the copy, and folded all agreements into the main T&C, eliminating verification steps for new users entirely.</p>
 
-<div class="full-img">
-  <img src="https://framerusercontent.com/images/s2JSRU6p8jQ2goCc6UTqV0kHxw.png" alt="Onboarding after" />
-</div>
+<div class="full-img"><img src="{{ '/assets/images/ajaib-onboarding-after.png' | relative_url }}" alt="Onboarding after" /></div>
 
 <div class="divider"></div>
 
 <span class="section-label">Chapter 4 — Results</span>
 
-<div class="full-img">
-  <img src="https://framerusercontent.com/images/x0STJyRr9sxzAOPn1brSrYxL6hA.png" alt="Results" />
-</div>
+<div class="full-img"><img src="{{ '/assets/images/ajaib-results.png' | relative_url }}" alt="Results" /></div>
 
 <div class="stats">
   <div class="stat"><span class="stat-num">75.5%</span><span class="stat-desc">User adoption rate post-launch</span></div>
@@ -134,9 +151,7 @@ title: Ajaib — Day Trading Feature
 <span class="section-label">Chapter 5 — Making it Even Faster</span>
 <p class="body-text">Following the successful launch, the goal was to eliminate the manual wallet transfer step — users can now access day trading from the order page directly, deposit instantly, and execute without switching wallets.</p>
 
-<div class="full-img">
-  <img src="https://framerusercontent.com/images/W6dGDcDwy2OGp91tfWEyd2rK8cE.jpg" alt="Faster trading flow" />
-</div>
+<div class="full-img"><img src="{{ '/assets/images/ajaib-faster.png' | relative_url }}" alt="Faster trading flow" /></div>
 
 <div class="divider"></div>
 
@@ -148,8 +163,48 @@ title: Ajaib — Day Trading Feature
     <span class="bnav-label">← Back</span>
     All projects
   </a>
-  <a class="bnav-link bnav-right" href="#">
-    <span class="bnav-label">Next →</span>
-    Cicil — Checkout Redesign
-  </a>
 </div>
+
+<script>
+(function(){
+  var outer=document.getElementById('outer');
+  var track=document.getElementById('track');
+  var frames=Array.from(document.querySelectorAll('.phone-frame'));
+  var tabs=Array.from(document.querySelectorAll('.ctab'));
+  var current=0;
+  var FRAME_W=220,GAP=24;
+
+  function getOffset(i){
+    var outerW=outer.offsetWidth;
+    var offset=i*(FRAME_W+GAP)-(outerW/2)+(FRAME_W/2);
+    return Math.max(0,offset);
+  }
+  function goTo(i,animate){
+    i=Math.max(0,Math.min(frames.length-1,i));
+    current=i;
+    frames.forEach(function(f,idx){f.classList.toggle('active',idx===i);});
+    tabs.forEach(function(t,idx){t.classList.toggle('active',idx===i);});
+    if(animate!==false)track.classList.add('animating');
+    track.style.transform='translateX(-'+getOffset(i)+'px)';
+  }
+  track.addEventListener('transitionend',function(){track.classList.remove('animating');});
+  tabs.forEach(function(tab){
+    tab.addEventListener('click',function(){goTo(parseInt(tab.dataset.i));});
+  });
+  var didDrag=false;
+  frames.forEach(function(frame){
+    frame.addEventListener('click',function(){if(!didDrag)goTo(parseInt(frame.dataset.i));});
+  });
+  var startX=0,startOffset=0,isDragging=false;
+  function pointerDown(e){isDragging=true;didDrag=false;startX=e.touches?e.touches[0].clientX:e.clientX;startOffset=getOffset(current);track.classList.remove('animating');outer.classList.add('dragging');}
+  function pointerMove(e){if(!isDragging)return;var x=e.touches?e.touches[0].clientX:e.clientX;var diff=startX-x;if(Math.abs(diff)>4)didDrag=true;track.style.transform='translateX(-'+Math.max(0,startOffset+diff)+'px)';}
+  function pointerUp(e){if(!isDragging)return;isDragging=false;outer.classList.remove('dragging');if(!didDrag)return;var x=e.changedTouches?e.changedTouches[0].clientX:e.clientX;var diff=startX-x;goTo(Math.abs(diff)>40?(diff>0?current+1:current-1):current);}
+  outer.addEventListener('mousedown',pointerDown);
+  window.addEventListener('mousemove',pointerMove);
+  window.addEventListener('mouseup',pointerUp);
+  outer.addEventListener('touchstart',pointerDown,{passive:true});
+  window.addEventListener('touchmove',pointerMove,{passive:true});
+  window.addEventListener('touchend',pointerUp);
+  goTo(0,false);
+})();
+</script>
