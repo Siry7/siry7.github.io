@@ -1,17 +1,20 @@
-python3 << 'PY'
-content = '''<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% if page.title %}{{ page.title }} \u2014 {% endif %}Siry \u30b7\u30ea</title>
+  <title>{% if page.title %}{{ page.title }} — {% endif %}Siry シリ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="{{ \'/assets/css/main.css\' | relative_url }}" />
+  {% if page.body_class == 'home' %}
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>(function(){try{var t=localStorage.getItem('home-theme');if(t==='light')document.documentElement.setAttribute('data-home-theme','light');}catch(e){}})();</script>
+  {% endif %}
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
 </head>
-<body>
-  {% include nav.html %}
+<body{% if page.body_class %} class="{{ page.body_class }}-body"{% endif %}>
+  {% unless page.body_class == 'home' %}{% include nav.html %}{% endunless %}
   <main class="shell">
     {{ content }}
   </main>
@@ -20,35 +23,18 @@ content = '''<!DOCTYPE html>
     <img alt="" />
   </div>
   <script>
-    (function () {
-      var lb = document.getElementById(\'lightbox\');
-      var big = lb.querySelector(\'img\');
-      function open(src, alt) {
-        big.src = src;
-        big.alt = alt || \'\';
-        lb.classList.add(\'is-open\');
-        document.body.style.overflow = \'hidden\';
-      }
-      function close() {
-        lb.classList.remove(\'is-open\');
-        document.body.style.overflow = \'\';
-        big.src = \'\';
-      }
-      document.querySelectorAll(\'.full-img img, .hero-img img\').forEach(function (img) {
-        img.style.cursor = \'zoom-in\';
-        img.addEventListener(\'click\', function () {
-          open(img.currentSrc || img.src, img.alt);
-        });
+    (function(){
+      var lb=document.getElementById('lightbox'),big=lb.querySelector('img');
+      function open(s,a){big.src=s;big.alt=a||'';lb.classList.add('is-open');document.body.style.overflow='hidden';}
+      function close(){lb.classList.remove('is-open');document.body.style.overflow='';big.src='';}
+      document.querySelectorAll('.full-img img,.hero-img img').forEach(function(img){
+        img.style.cursor='zoom-in';
+        img.addEventListener('click',function(){open(img.currentSrc||img.src,img.alt);});
       });
-      lb.querySelector(\'.lightbox-close\').addEventListener(\'click\', close);
-      lb.addEventListener(\'click\', function (e) { if (e.target === lb) close(); });
-      document.addEventListener(\'keydown\', function (e) { if (e.key === \'Escape\') close(); });
+      lb.querySelector('.lightbox-close').addEventListener('click',close);
+      lb.addEventListener('click',function(e){if(e.target===lb)close();});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
     })();
   </script>
 </body>
-</html>'''
-
-with open('_layouts/default.html', 'w', encoding='utf-8') as f:
-    f.write(content)
-print('done')
-PY
+</html>
