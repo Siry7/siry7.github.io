@@ -1,34 +1,95 @@
 ---
 layout: default
 title: Home
+body_class: home
 ---
 
-<div class="intro">
-  <p>I'm Siry — a UI/UX designer crafting digital experiences rooted in clarity and intent. Based in Japan, working with teams worldwide.</p>
-  <p>My work lives at the intersection of research, visual precision, and the quiet logic of how people move through a screen. I care about the small decisions that make everything feel easier.</p>
-  <p>When I'm not designing, I share what I learn about UX and visual thinking — building a small corner of the internet for designers who care about the details.</p>
+<div class="home">
+  <header class="home-header">
+    <a class="home-logo" href="{{ '/' | relative_url }}">Siry<span>シリー</span></a>
+    <button class="home-theme-btn" id="homeThemeBtn" type="button" aria-label="Toggle light / dark theme">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M13.68687 9.16667c-1.17448 3.02534-4.25469 4.86555-7.47531 4.46597-3.22062-0.39957-5.75775-2.9367-6.15733-6.15732-0.39957-3.22062 1.44064-6.30083 4.46598-7.47532-2.53131 2.53131-2.53131 6.63536 0 9.16667 2.5313 2.53131 6.63536 2.53131 9.16666 0" transform="translate(3.396459 2.916667)" stroke="currentColor" stroke-width="1.458" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+  </header>
+
+  <div class="home-hero-art"><img src="{{ '/assets/images/hero-doodle.png' | relative_url }}" alt="" /></div>
+
+  <h1 class="home-heading">Hey, I’m Siry.</h1>
+
+  <div class="home-intro">
+    <p>Product (UI UX) designer currently studying Japanese in Kyoto</p>
+    <p>My work lives at the intersection of research, visual precision, and the quiet logic of how people move through a screen. I care about the small decisions that make everything feel easier. I’ve designed products for companies like Ajaib and Cicil.</p>
+    <p>Loved doing content creation and photography in my freetime.</p>
+  </div>
+
+  <section class="home-showcase">
+    <span class="home-section-label">Work showcase</span>
+
+    <a class="home-project" href="{{ '/work/ajaib/' | relative_url }}">
+      <div class="home-project-head">
+        <h3>Adapting day trading to the Indonesian market</h3>
+        <span>Ajaib Investment · 2023</span>
+      </div>
+      <div class="home-project-cover">
+        <img src="{{ '/assets/images/home-ajaib-daytrading.png' | relative_url }}" alt="Ajaib Day Trading" />
+      </div>
+    </a>
+
+    <div class="home-project">
+      <div class="home-project-head">
+        <h3>Enhancing Ajaib's Auto-Trade feature for a seamless user experience</h3>
+        <span>Ajaib Investment · 2022</span>
+      </div>
+      <div class="home-project-cover home-project-cover--layered">
+        <img class="base" src="{{ '/assets/images/home-autotrade-1.png' | relative_url }}" alt="" />
+        <img class="l2" src="{{ '/assets/images/home-autotrade-2.png' | relative_url }}" alt="" />
+        <img class="l3" src="{{ '/assets/images/home-autotrade-3.png' | relative_url }}" alt="" />
+        <img class="l4" src="{{ '/assets/images/home-autotrade-4.png' | relative_url }}" alt="" />
+      </div>
+    </div>
+
+    <div class="home-project">
+      <div class="home-project-head">
+        <h3>New Cicil price simulations and checkout experience</h3>
+        <span>Cicil.co.id · 2021</span>
+      </div>
+      <div class="home-project-cover">
+        <img src="{{ '/assets/images/home-cicil-checkout.png' | relative_url }}" alt="Cicil Checkout" />
+      </div>
+    </div>
+
+    <div class="home-project">
+      <div class="home-project-head">
+        <h3>Membership onboarding gamifications</h3>
+        <span>Cicil.co.id · 2021</span>
+      </div>
+      <div class="home-project-cover">
+        <img src="{{ '/assets/images/home-cicil-membership.png' | relative_url }}" alt="Cicil Membership Onboarding" />
+      </div>
+    </div>
+  </section>
+
+  <footer class="home-footer">
+    <a href="https://www.linkedin.com/in/benedictusbio/" target="_blank">LinkedIn</a>
+    <span>•</span>
+    <a href="mailto:sirilusbio@gmail.com">Email</a>
+    <span>•</span>
+    <a href="{{ '/contact/' | relative_url }}">Contact</a>
+  </footer>
 </div>
 
-<div class="divider"></div>
-
-<span class="label">Tools & Skills</span>
-<div class="tools-wrap">
-  <span class="tool">Figma</span>
-  <span class="tool">Framer</span>
-  <span class="tool">Prototyping</span>
-  <span class="tool">User Research</span>
-  <span class="tool">Design Systems</span>
-  <span class="tool">Wireframing</span>
-  <span class="tool">Usability Testing</span>
-  <span class="tool">HTML & CSS</span>
-  <span class="tool">Visual Design</span>
-</div>
-
-<div class="divider"></div>
-
-<span class="label">Find me on</span>
-<div class="social-list">
-  <a href="mailto:sirilusbio@gmail.com">sirilusbio@gmail.com</a>
-  <a href="https://www.instagram.com/sirilusbio/" target="_blank">Instagram — @sirilusbio</a>
-  <a href="https://www.linkedin.com/in/benedictusbio/" target="_blank">LinkedIn — benedictusbio</a>
-</div>
+<script>
+(function(){
+  var btn=document.getElementById('homeThemeBtn');
+  if(!btn) return;
+  function apply(t){document.documentElement.setAttribute('data-home-theme',t);}
+  btn.addEventListener('click',function(){
+    var current=document.documentElement.getAttribute('data-home-theme')==='light'?'light':'dark';
+    var next=current==='light'?'dark':'light';
+    apply(next);
+    try{localStorage.setItem('home-theme',next);}catch(e){}
+  });
+})();
+</script>
