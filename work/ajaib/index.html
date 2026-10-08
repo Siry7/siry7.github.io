@@ -83,31 +83,6 @@ description: Adapting day trading to the Indonesian stock market.
 <figure class="fig" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-multiplier.png' | relative_url }}" alt="" /></figure>
 <h3>Day trading ratio</h3>
 <p>Another thing to mention about all of this is the haircut value or Day Trade ratio (DT ratio). This is basically an indicator to measure your risk. As I explained above, higher-risk stocks mean a higher haircut value (or lower multiplier). We want to make sure that your leverage margin is safe. The percentage indicates how much buying power is used and the portfolio risk value. So the higher the ratio, the higher the risk you hold. We want to help users maintain their safety by using percentage and color cues. Additionally, if you reach a 90% ratio, we would have to force-sell some of your stocks to keep your ratio healthy.</p>
-
-<div class="dtcards">
-  <div class="dtcard">
-    <div class="dtcard-bp"><span>Buying Power DT</span><b>Rp60.000.000</b></div>
-    <div class="dtpill is-ok"><i></i>Rasio DT: 0%</div>
-    <div class="dtrow dtrow--sep"><span>Jaminan Tersedia</span><b>Rp12.000.000</b></div>
-    <div class="dtrow"><span>Tambahan BP Terpakai</span><b>Rp0</b></div>
-    <div class="dttransfer">Transfer</div>
-  </div>
-  <div class="dtcard">
-    <div class="dtcard-bp"><span>Buying Power DT</span><b>Rp20.000.000</b></div>
-    <div class="dtpill is-warn"><i></i>Rasio DT: 60%</div>
-    <div class="dtrow dtrow--sep"><span>Jaminan Tersedia</span><b>Rp12.000.000</b></div>
-    <div class="dtrow"><span>Tambahan BP Terpakai</span><b>Rp40.000.000</b></div>
-    <div class="dttransfer">Transfer</div>
-  </div>
-  <div class="dtcard">
-    <div class="dtcard-bp"><span>Buying Power DT</span><b>Rp7.000.000</b></div>
-    <div class="dtpill is-bad"><i></i>Rasio DT: 75,00%</div>
-    <div class="dtrow dtrow--sep"><span>Jaminan Tersedia</span><b>Rp7.000.000</b></div>
-    <div class="dtrow"><span>Tambahan BP Terpakai</span><b>Rp55.000.000</b></div>
-    <div class="dttransfer">Transfer</div>
-  </div>
-</div>
-
 <h3>New fish tank methods</h3>
 <p>Just like you are not supposed to throw your fish directly into new water in the tank, we want to gradually introduce users to the benefits of day trading multipliers. Instead of applying the multiplier to a wide range of stocks, which would result in a lower multiplier (affecting the day trade ratio and available buying power differently with each trade), we want our users to first adapt to the concept by releasing only a 5x or maximum multiplier with low risk. This means if you trade an amount x, your used buying power would be x, and the ratio should reflect the percentage. While a lower multiplier may cause higher usage and a higher ratio.</p>
 <figure class="fig" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-fishtank.png' | relative_url }}" alt="" /></figure>
@@ -127,9 +102,9 @@ description: Adapting day trading to the Indonesian stock market.
   <li>We haven't rolled out this feature to more users.</li>
   <li>We used the copy "Forced sell," which alarmed the users.</li>
 </ul>
-<figure class="fig" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-onboarding-1.png' | relative_url }}" alt="" /></figure>
+{% include shots.html tabs="Intro|Signature guide|Terms &amp; sign|Activation status" files="/assets/images/cases/dt-onboarding-1-01.png|/assets/images/cases/dt-onboarding-1-02.png|/assets/images/cases/dt-onboarding-1-03.png|/assets/images/cases/dt-onboarding-1-04.png" %}
 <p>To fix these problems, we did another set of iterations and testing that resulted in the onboarding page being instant and using better copy.</p>
-<figure class="fig" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-onboarding-2.png' | relative_url }}" alt="" /></figure>
+{% include shots.html tabs="Intro|Terms &amp; sign|Activated" files="/assets/images/cases/dt-onboarding-2-01.png|/assets/images/cases/dt-onboarding-2-02.png|/assets/images/cases/dt-onboarding-2-03.png" %}
 <p>How did we remove the digital sign and account verifications? (Digital agreements were required by our country regulations).</p>
 <p>Easy. We put all this "agreement" into our main T&amp;C. So for our new users, this feature will be fully eligible for them (if they are in our user criteria). We could scrape all the account verifications part because all the filtering is done on the account level.</p>
 <h2>Chapter 4. Update after 2 months of release date</h2>

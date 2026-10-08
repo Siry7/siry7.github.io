@@ -48,7 +48,7 @@ description: Enhancing Ajaib's Auto-Trade feature for a seamless user experience
 <div class="defblock"><b>Limit price or order price</b><p>This is the specific price at which you want to buy or sell a stock. For buying, it's the highest price you're willing to pay, and for selling, it's the lowest price you're willing to accept. It's like saying you will buy a product only if you can get it for a certain price or less, or sell it only if you can get a certain price or more.</p></div>
 <h3>Problem statement</h3>
 <p>50% of the feature adopters chose to set the trigger price the same as the limit/order price because they don't have the technical skill to create good trigger rules, causing the conversion rate of the order to be below 50%.</p>
-<figure class="fig fig--pad" style="aspect-ratio:640/420"><img src="{{ '/assets/images/cases/at-problem.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--pad" style="aspect-ratio:640/560"><img src="{{ '/assets/images/cases/at-problem-phone.png' | relative_url }}" alt="" /></figure>
 <h2>Chapter 2. Craft</h2>
 <h3>The solutions</h3>
 <p>After extensive brainstorming sessions, I came up with an experimental idea. As the data indicated, users struggled with the conditions due to the ≤ and ≥ symbols. I aimed to simplify this by allowing users to input the price without needing to think about the symbols.</p>
@@ -70,12 +70,7 @@ description: Enhancing Ajaib's Auto-Trade feature for a seamless user experience
   <span><img src="{{ '/assets/images/cases/at-old-2.png' | relative_url }}" alt="" /></span>
 </figure>
 <p class="kicker">From this</p>
-<figure class="fig fig--pair" style="aspect-ratio:640/336">
-  <span><img src="{{ '/assets/images/cases/at-new-1.png' | relative_url }}" alt="" /></span>
-  <span><img src="{{ '/assets/images/cases/at-new-2.png' | relative_url }}" alt="" /></span>
-  <span><img src="{{ '/assets/images/cases/at-new-3.png' | relative_url }}" alt="" /></span>
-  <span><img src="{{ '/assets/images/cases/at-new-4.png' | relative_url }}" alt="" /></span>
-</figure>
+{% include shots.html tabs="Sell · Overview|Sell · Details|Buy · Overview|Buy · Details" files="/assets/images/cases/at-new-1.png|/assets/images/cases/at-new-2.png|/assets/images/cases/at-new-3.png|/assets/images/cases/at-new-4.png" %}
 <p class="kicker">To this. Rate the glow up 🤩</p>
 <h3>Helpful guide to trade</h3>
 <p>Not just spoiling our users with an easy feature, we also want them to actually understand the logic and strategy behind auto trading. We gave them clear explanations of the terms and described the logic with scenarios.</p>
