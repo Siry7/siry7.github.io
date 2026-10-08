@@ -1,0 +1,48 @@
+- name: Omnihr
+  years: "2024 – 2026"
+  logo: /assets/images/logos/logo-omnihr.png
+  projects:
+    - title: Proxy view permission
+      desc: Grant access for admin to execute proxy viewing for other employee
+    - title: OCR for expense reimbursement
+      desc: Quality of life improvement for expense module (Powered by Claude)
+    - title: Omnihr AI chatbot Mino (Taskforce)
+      desc: Support team for Omnihr first AI feature deployment
+
+- name: Lumina
+  years: "2023 – 2024"
+  logo: /assets/images/logo-lumina.png
+  projects:
+    - title: Lumibot
+      desc: Building automation bot for US market (In progress)
+      thumb: /assets/images/cases/home-lumibot.png
+
+- name: Ajaib
+  years: "2021 – 2022"
+  logo: /assets/images/cases/logo-ajaib.png
+  projects:
+    - title: Ajaib Day Trading
+      desc: Adapting day trading to the Indonesian market
+      thumb: /assets/images/cases/home-daytrading.png
+      url: /work/ajaib/
+    - title: Ajaib Auto-Trade
+      desc: Making auto trading easy for every trader
+      thumb: /assets/images/cases/home-autotrade-1.png
+      url: /work/ajaib-auto-trade/
+    - title: Ajaib Design System
+      desc: Tokens and components for web and mobile
+
+- name: Cicil.co.id
+  years: "2020 – 2021"
+  logo: /assets/images/logos/logo-cicil.png
+  projects:
+    - title: Price Simulation & Checkout
+      desc: A clearer way for students to simulate installments
+      thumb: /assets/images/cases/home-cicil-checkout.png
+      url: /work/cicil-checkout/
+    - title: Membership Onboarding
+      desc: A fun quiz to pick the right membership tier
+      thumb: /assets/images/cases/og-objectives.png
+      url: /work/cicil-membership/
+    - title: Landing Page Refresh
+      desc: New visual direction for the marketing site

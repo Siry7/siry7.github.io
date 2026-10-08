@@ -1,190 +1,167 @@
 ---
-layout: default
-title: Ajaib — Day Trading Feature
+layout: site
+page_class: cs
+title: Ajaib Day Trading
+description: Adapting day trading to the Indonesian stock market.
 ---
 
-<a class="back" href="{{ '/work/' | relative_url }}">← Back to work</a>
+<a class="cs-back" href="{{ '/' | relative_url }}">← Back to home</a>
+<p class="cs-eyebrow">Ajaib • 2023 · New feature • Mobile</p>
+<h1 class="cs-title">Adapting day trading to Indonesian stock market</h1>
 
-<span class="case-type">New Feature · Mobile · 2023</span>
-<h1 class="case-title">Adapting day trading to the Indonesian stock market</h1>
-<div class="case-meta">
-  <div class="meta-item"><span class="meta-label">Company</span><span class="meta-val">Ajaib Securities</span></div>
-  <div class="meta-item"><span class="meta-label">Role</span><span class="meta-val">Product Designer</span></div>
-  <div class="meta-item"><span class="meta-label">Duration</span><span class="meta-val">3 months</span></div>
-  <div class="meta-item"><span class="meta-label">Platform</span><span class="meta-val">Android & iOS</span></div>
-  <div class="meta-item"><span class="meta-label">Team</span><span class="meta-val">UX Writer, Product Manager</span></div>
+<div class="cs-cover" style="aspect-ratio:640/400">
+  <img src="{{ '/assets/images/banner.png' | relative_url }}" alt="Ajaib day trading" />
 </div>
 
-<div class="hero-img">
-  <img src="{{ '/assets/images/ajaib-hero.png' | relative_url }}" alt="Ajaib hero" />
-</div>
+<dl class="cs-details">
+  <div><dt>Role</dt><dd>Product designer</dd></div>
+  <div><dt>Duration</dt><dd>3 Month</dd></div>
+  <div><dt>Platform</dt><dd>Android and IOS</dd></div>
+  <div><dt>Team</dt><dd>UX Writer and Product manager</dd></div>
+</dl>
 
-<span class="section-label">Overview</span>
-<p class="body-text">Ajaib Securities is one of Indonesia's largest stock trading and investing platforms — the fastest Southeast Asian startup to reach unicorn status in just two years. This project started from an upper management initiative to replicate the big success of India's investment and trading apps.</p>
-<p class="body-text">When I joined the project, I had no prior context about this feature. The only thing I knew was that it was somewhat similar to our existing margin trading — giving users leverage for their trading, with trading fee as the primary business goal.</p>
+<p class="cs-note">I understand that this project is longer than my other study case. I've prepared a product showcase page just incase you want to see highlights only of this projects.</p>
 
-<div class="stats">
-  <div class="stat"><span class="stat-num">75.5%</span><span class="stat-desc">Adoption rate after release</span></div>
-  <div class="stat"><span class="stat-num">2 mo.</span><span class="stat-desc">To hit quarterly trading volume goal</span></div>
-  <div class="stat"><span class="stat-num">1.5 mo.</span><span class="stat-desc">To roll out to 100% of users</span></div>
-</div>
-
-<div class="divider"></div>
-
-<span class="section-label">Key Screens</span>
-<div class="carousel-wrap">
-  <div class="carousel-tabs">
-    <button class="ctab active" data-i="0">Screen 1</button>
-    <button class="ctab" data-i="1">Screen 2</button>
-    <button class="ctab" data-i="2">Screen 3</button>
-    <button class="ctab" data-i="3">Screen 4</button>
-  </div>
-  <div class="carousel-track-outer" id="outer">
-    <div class="carousel-track" id="track">
-      <div class="phone-frame active" data-i="0">
-        <div class="phone-inner">
-          <div class="phone-notch"></div>
-          <img src="{{ '/assets/images/ajaib-screen-1.svg' | relative_url }}" alt="Screen 1" />
-        </div>
-      </div>
-      <div class="phone-frame" data-i="1">
-        <div class="phone-inner">
-          <div class="phone-notch"></div>
-          <img src="{{ '/assets/images/ajaib-screen-2.svg' | relative_url }}" alt="Screen 2" />
-        </div>
-      </div>
-      <div class="phone-frame" data-i="2">
-        <div class="phone-inner">
-          <div class="phone-notch"></div>
-          <img src="{{ '/assets/images/ajaib-screen-3.svg' | relative_url }}" alt="Screen 3" />
-        </div>
-      </div>
-      <div class="phone-frame" data-i="3">
-        <div class="phone-inner">
-          <div class="phone-notch"></div>
-          <img src="{{ '/assets/images/ajaib-screen-4.svg' | relative_url }}" alt="Screen 4" />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="divider"></div>
-
-<span class="chapter">Quick context — margin vs. day trading</span>
-<p class="body-text">Margin trading lets users borrow money from the brokerage to buy more stocks than they could with their own money. Day trading is similar, but users can only hold stocks until end of market hours. If users haven't sold by close, we force-sell at market price.</p>
-<p class="body-text">Day trading also has a much lower barrier to entry: you need around $12,200 to access margin trading, while any deposit amount unlocks day trading directly.</p>
-
-<div class="full-img"><img src="{{ '/assets/images/ajaib-margin.png' | relative_url }}" alt="Margin vs day trading" /></div>
-<div class="full-img"><img src="{{ '/assets/images/ajaib-difference.png' | relative_url }}" alt="Day trading difference" /></div>
-
-<div class="divider"></div>
-
-<span class="section-label">Chapter 1 — Product Foundations</span>
-<p class="body-text">Having leverage without a massive deposit and no loan fees sounds great — but what's the catch? The team aligned on core product fundamentals before any design work began.</p>
-
-<div class="full-img"><img src="{{ '/assets/images/ajaib-foundations.png' | relative_url }}" alt="Product foundations" /></div>
-<div class="full-img"><img src="{{ '/assets/images/ajaib-overview.png' | relative_url }}" alt="Product overview" /></div>
-
-<span class="chapter">Market research & concept testing</span>
-<p class="body-text">We identified that 25.7–34.2% of our user base matched the target criteria. While the core concept tested smoothly, users had lingering doubts:</p>
-<ul class="case-list">
+<article class="cs-article">
+<h2>About Ajaib</h2>
+<p>Ajaib Securities is one of Indonesia's largest stock trading and investing platforms. It's also the fastest Southeast Asian startup to reach unicorn status, achieving this milestone in just two years. We offer a variety of features and products to support traders and investors.</p>
+<h2>How it started</h2>
+<p>This project started from an upper management initiative to replicate the big success of India's investment/trading app. When starting this project, I had no context about this feature. The only thing I knew was that this feature is somewhat similar to our current existing feature, margin trading. Basically, we gave leverage to our users for their trading and targeted the trading fee as our goal.</p>
+<figure class="fig" style="aspect-ratio:640/360"><img src="{{ '/assets/images/cases/dt-started.png' | relative_url }}" alt="" /></figure>
+<h2>But first, quick context about margin trading</h2>
+<p>Margin trading allows you to borrow money from your brokerage to buy more stocks than you could with just your own money. It's like taking a loan to invest in the stock market.</p>
+<figure class="fig fig--pad" style="aspect-ratio:640/520"><img src="{{ '/assets/images/cases/dt-margin.png' | relative_url }}" alt="" /></figure>
+<h3>How it works:</h3>
+<ul>
+  <li>Initial Investment: You deposit a certain amount of money into your brokerage account. This is your margin.</li>
+  <li>Borrowing Funds: Based on the margin you have, the brokerage lends you additional money.</li>
+  <li>Buying Stocks: You use the combined amount (your money + borrowed money) to buy stocks.</li>
+  <li>Repaying the Loan: Eventually, you need to repay the borrowed amount, plus any interest or fees charged by the brokerage.</li>
+</ul>
+<h3>What's the difference?</h3>
+<p>While margin trading allows you to hold the stock you bought with your margin buying power, day trading only allows you to hold the stock until the end of market hours but with bigger leverage. If users haven't sold the stocks, we will force-sell the stocks using market price.</p>
+<p>You also need around $12,200 (depends on the rupiah to USD rate) to have access to margin trading, while you can deposit any amount to use day trading directly.</p>
+<figure class="fig" style="aspect-ratio:640/359"><img src="{{ '/assets/images/cases/dt-difference.png' | relative_url }}" alt="" /></figure>
+<p>Now that we know the fundamental difference between margin trading and day trading, let's jump into the design process, shall we?</p>
+<h2>Project overview</h2>
+<p>While margin trading allows you to hold the stock you bought with your margin buying power, day trading only allows you to hold the stock until the end of market hour but with bigger leverage. If users haven't sold the stocks, we will force sell the stocks using market price.</p>
+<h3>Objectives</h3>
+<p>We want to build a feature that serves daily traders who don't have the privilege to use leverage from margin trading while simultaneously educating them on risk management and margin calls.</p>
+<h3>Expected constraints and users pain points early in the project:</h3>
+<ul>
+  <li>They want to use this feature but need all the help from the broker to educate them on which stocks are good for trading (High risk, high return).</li>
+  <li>Users want to have a safety net for their risk management.</li>
+  <li>They want to fully understand any side effects of this feature.</li>
+</ul>
+<h2>Chapter 1. Product foundations</h2>
+<p>Having leverage without needing a massive amount of deposits and being free of loan fees sounds good, right? But what is the downside? How can a broker give away money without any return benefits? Is it a fee? Is it something that users might regret later?</p>
+<p>To make sure that this feature has its own benefits and differences from margin trading, we wanted to make the fundamentals clear and useful to our users. Everyone pitched in their ideas on how to fully function this product to live. There were a lot of ideas thrown around, but ultimately we decided on something like this:</p>
+<figure class="fig fig--pair" style="aspect-ratio:640/314">
+  <span><img src="{{ '/assets/images/cases/dt-foundation-1.png' | relative_url }}" alt="" /></span>
+  <span><img src="{{ '/assets/images/cases/dt-foundation-2.png' | relative_url }}" alt="" /></span>
+</figure>
+<h3>Market research and product fit</h3>
+<p>To fully understand how our users will react to this feature, we conducted full-scale research, starting from gathering users that match our criteria (our users' database indicates that we have around 25.7%-34.2% of users that match our criteria of who most likely will use this feature) and invited them for an interview and concept testing the first iteration of the feature.</p>
+<figure class="fig" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-research.png' | relative_url }}" alt="" /></figure>
+<p>While the concept testing went smoothly because it basically just changed your balance to your day trading balance on the trading page, there was lingering doubt that people weren't getting the correct idea about this product.</p>
+<ul>
   <li>Is this a loan? I don't want to use a loan to trade.</li>
-  <li>Why do we force-sell at end of day? I want to hold longer.</li>
-  <li>Does this mean I can also get a bigger loss?</li>
+  <li>Why do we need to force-sell our stock at the end of the day? I want to hold it longer.</li>
+  <li>Does this mean we can also get a bigger loss on this trade?</li>
 </ul>
+<p>Basically, our users are cautious because they don't want to get a big loss while they want to get a bigger profit. One of the important user criteria is their trading value is around $60-$100 per day. That amount of money is big for Indonesians but also indicates these people can't afford to spend a lot on trading. It might be for safety, or they might not have more cold money to trade. So this higher risk is alarming to them.</p>
+<h3>Risk management and leverage</h3>
+<p>We understand that our users are concerned about their possibility of multiplied loss, fees, and end-of-day force-sell. How we turned it around is by informing them in the onboarding that to maintain their safety, we implemented force-sell at the end of the market. The intention is to brand that force-sell is not a downside but instead a risk management mechanism. Two birds with one stone. We also stated that we will not charge any fee for the leverage because we get our leverage back after the force-sell. Also, we are forbidden to write "Loan" at any cost.</p>
+<figure class="fig" style="aspect-ratio:640/378"><img src="{{ '/assets/images/cases/dt-risk.png' | relative_url }}" alt="" /></figure>
+<h2>Chapter 2. Haircut value</h2>
+<p>What is haircut value? It's basically our term to explain the risk of the stocks. For example, stock A and stock B can have different haircut values based on the risk of the stocks. The haircut value will determine how much buying power will be reduced.</p>
+<figure class="fig" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-haircut.png' | relative_url }}" alt="" /></figure>
+<p>This haircut value comes from our risk team. But the problem was, the information about how much haircut value of every stock is confidential 💀. How do we even convince our users who already have doubts about this product that you can trade stocks at a certain value but it turns out reducing a lot more of your buying power without any explanations?</p>
+<h3>Introducing multiplier</h3>
+<p>In an attempt to make this feature more user-friendly, I proposed that instead of using this haircut value concept, we use multiplier instead. This means that when a relatively safer stock is involved, users can use 100% of their buying power with the multiplier of 5x buying power (at the time we only allowed 5x). If the stock is more volatile, we only allow you to buy the stock 2x-4x of your buying power.</p>
+<p>This idea was a homerun from me. Not only does it make the haircut value clearer, but it is also used as a tool to attract more trades. You can see the list of stocks and some stocks that have higher multiplier becoming desirable stocks to trade.</p>
+<figure class="fig" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-multiplier.png' | relative_url }}" alt="" /></figure>
+<h3>Day trading ratio</h3>
+<p>Another thing to mention about all of this is the haircut value or Day Trade ratio (DT ratio). This is basically an indicator to measure your risk. As I explained above, higher-risk stocks mean a higher haircut value (or lower multiplier). We want to make sure that your leverage margin is safe. The percentage indicates how much buying power is used and the portfolio risk value. So the higher the ratio, the higher the risk you hold. We want to help users maintain their safety by using percentage and color cues. Additionally, if you reach a 90% ratio, we would have to force-sell some of your stocks to keep your ratio healthy.</p>
 
-<div class="full-img"><img src="{{ '/assets/images/ajaib-research.png' | relative_url }}" alt="Market research" /></div>
-
-<span class="chapter">Risk management reframe</span>
-<p class="body-text">We reframed force-sell as a risk management mechanism, not a downside. No fees are charged for leverage, and we were explicitly forbidden to use the word "Loan" anywhere in the product.</p>
-
-<div class="full-img"><img src="{{ '/assets/images/ajaib-reframe.png' | relative_url }}" alt="Risk management" /></div>
-
-<div class="divider"></div>
-
-<span class="section-label">Chapter 2 — Haircut Value & Multiplier</span>
-<p class="body-text">Haircut value is our internal term for stock risk — higher-risk stocks reduce buying power more. The problem: this data was confidential. We couldn't explain to users why their buying power dropped.</p>
-
-<div class="full-img"><img src="{{ '/assets/images/ajaib-haircut.png' | relative_url }}" alt="Haircut value" /></div>
-
-<div class="callout"><p>I proposed replacing the haircut value concept with a multiplier system. Safer stocks = 5x buying power. More volatile stocks = 2x–4x. This made risk immediately readable — and turned high-multiplier stocks into desirable trading targets.</p></div>
-
-<div class="full-img"><img src="{{ '/assets/images/ajaib-multiplier.png' | relative_url }}" alt="Multiplier system" /></div>
-
-<span class="chapter">Fish tank method — gradual rollout</span>
-<p class="body-text">Like not throwing a fish directly into new tank water, we launched only with 5x on low-risk blue-chip stocks first. Users quickly asked for more volatile stocks. We expanded with no reported complaints.</p>
-
-<div class="full-img"><img src="{{ '/assets/images/ajaib-rollout.png' | relative_url }}" alt="Gradual rollout" /></div>
-
-<div class="divider"></div>
-
-<span class="section-label">Chapter 3 — Onboarding Chaos</span>
-<p class="body-text">One month after launch: only 25% of eligible users finished onboarding, but 87% of those who did used the feature daily. Root causes:</p>
-<ul class="case-list">
-  <li>Onboarding information was unclear and overwhelming</li>
-  <li>The copy said "Forced sell" — users found it alarming</li>
-  <li>Unnecessary account verification steps adding friction</li>
-</ul>
-
-<div class="full-img"><img src="{{ '/assets/images/ajaib-onboarding-before.png' | relative_url }}" alt="Onboarding before" /></div>
-<p class="body-text">We iterated fast — made onboarding instant, rewrote the copy, and eliminated verification steps for new users entirely.</p>
-<div class="full-img"><img src="{{ '/assets/images/ajaib-onboarding-after.png' | relative_url }}" alt="Onboarding after" /></div>
-
-<div class="divider"></div>
-
-<span class="section-label">Chapter 4 — Results</span>
-<div class="full-img"><img src="{{ '/assets/images/ajaib-results.png' | relative_url }}" alt="Results" /></div>
-
-<div class="stats">
-  <div class="stat"><span class="stat-num">75.5%</span><span class="stat-desc">User adoption rate post-launch</span></div>
-  <div class="stat"><span class="stat-num">Q goal</span><span class="stat-desc">Hit in just 2 months</span></div>
-  <div class="stat"><span class="stat-num">100%</span><span class="stat-desc">Rollout in 1.5 months vs. 1 planned quarter</span></div>
+<div class="dtcards">
+  <div class="dtcard">
+    <div class="dtcard-bp"><span>Buying Power DT</span><b>Rp60.000.000</b></div>
+    <div class="dtpill is-ok"><i></i>Rasio DT: 0%</div>
+    <div class="dtrow dtrow--sep"><span>Jaminan Tersedia</span><b>Rp12.000.000</b></div>
+    <div class="dtrow"><span>Tambahan BP Terpakai</span><b>Rp0</b></div>
+    <div class="dttransfer">Transfer</div>
+  </div>
+  <div class="dtcard">
+    <div class="dtcard-bp"><span>Buying Power DT</span><b>Rp20.000.000</b></div>
+    <div class="dtpill is-warn"><i></i>Rasio DT: 60%</div>
+    <div class="dtrow dtrow--sep"><span>Jaminan Tersedia</span><b>Rp12.000.000</b></div>
+    <div class="dtrow"><span>Tambahan BP Terpakai</span><b>Rp40.000.000</b></div>
+    <div class="dttransfer">Transfer</div>
+  </div>
+  <div class="dtcard">
+    <div class="dtcard-bp"><span>Buying Power DT</span><b>Rp7.000.000</b></div>
+    <div class="dtpill is-bad"><i></i>Rasio DT: 75,00%</div>
+    <div class="dtrow dtrow--sep"><span>Jaminan Tersedia</span><b>Rp7.000.000</b></div>
+    <div class="dtrow"><span>Tambahan BP Terpakai</span><b>Rp55.000.000</b></div>
+    <div class="dttransfer">Transfer</div>
+  </div>
 </div>
 
-<div class="divider"></div>
+<h3>New fish tank methods</h3>
+<p>Just like you are not supposed to throw your fish directly into new water in the tank, we want to gradually introduce users to the benefits of day trading multipliers. Instead of applying the multiplier to a wide range of stocks, which would result in a lower multiplier (affecting the day trade ratio and available buying power differently with each trade), we want our users to first adapt to the concept by releasing only a 5x or maximum multiplier with low risk. This means if you trade an amount x, your used buying power would be x, and the ratio should reflect the percentage. While a lower multiplier may cause higher usage and a higher ratio.</p>
+<figure class="fig" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-fishtank.png' | relative_url }}" alt="" /></figure>
+<p>To tackle this problem, we agreed to introduce the multiplier gradually. Instead of releasing this feature to all stocks with various buying powers, we only released it to blue-chip stocks that are relatively safer, with all of them having 5x buying power. So if you have 10 million buying power, you can use it as 10 million, while it's not the case if you bought a lower multiplier stock.</p>
+<p class="lead">“Can we have this feature on more volatile stocks?”</p>
+<p>There was a lot of feedback from the users requesting day trading to be eligible for more volatile stocks so they could get a better profit. I'll take this as a successful strategy.</p>
+<p>We enabled this feature for a wider range of stocks with lower multiplier while also educating the users about lower multiplier meaning higher risk and higher buying power usage. There were no reported complaints even after the release. Nice.</p>
+<h2>Chapter 3. Onboarding chaos</h2>
+<p>It's not always a smooth ride. One month after the launch, we realized that there was this kind of pattern from our users who got early access to this feature:</p>
+<ul>
+  <li>Only 25% of our users finished onboarding and were fully eligible for using day trading.</li>
+  <li>While 87% of our users who actually finished onboarding are using this feature daily.</li>
+</ul>
+<p>There were a few hypotheses about these onboarding problems. But we knew the problem was in the onboarding flow:</p>
+<ul>
+  <li>Onboarding information is unclear.</li>
+  <li>We haven't rolled out this feature to more users.</li>
+  <li>We used the copy "Forced sell," which alarmed the users.</li>
+</ul>
+<figure class="fig" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-onboarding-1.png' | relative_url }}" alt="" /></figure>
+<p>To fix these problems, we did another set of iterations and testing that resulted in the onboarding page being instant and using better copy.</p>
+<figure class="fig" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-onboarding-2.png' | relative_url }}" alt="" /></figure>
+<p>How did we remove the digital sign and account verifications? (Digital agreements were required by our country regulations).</p>
+<p>Easy. We put all this "agreement" into our main T&amp;C. So for our new users, this feature will be fully eligible for them (if they are in our user criteria). We could scrape all the account verifications part because all the filtering is done on the account level.</p>
+<h2>Chapter 4. Update after 2 months of release date</h2>
+<p>I can proudly say that our MVP release is a huge success. Here are some facts about this project that I can present:</p>
+<figure class="fig" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-update.png' | relative_url }}" alt="" /></figure>
+<ul>
+  <li>75.5% adoption rate after release.</li>
+  <li>Quarterly daily trading volume goals achieved only in 2 months.</li>
+  <li>Rolled out to 100% of users in 1.5 months because of the positive feedback (originally, we wanted to see the results in 1 quarter before assessing them).</li>
+</ul>
+<h2>Chapter 5. Even faster trading experience</h2>
+<p>With the successful product launch, upper management wants this feature to be even more accessible and faster to execute. The goal was to make this feature more seamless when trading, meaning that we need to cut some of the original flow, like how users were required to move their rupiah balance to the day trading wallet before they could start trading with the day trading balance.</p>
+<figure class="fig" style="aspect-ratio:640/427"><img src="{{ '/assets/images/cases/dt-faster.jpg' | relative_url }}" alt="" /></figure>
+<h3>Switch between trading methods</h3>
+<p>Because the objective was to make this trading even faster and more seamless, we're changing the mental model.</p>
+<figure class="fig fig--pad" style="aspect-ratio:640/600"><img src="{{ '/assets/images/cases/dt-switch.gif' | relative_url }}" alt="" /></figure>
+<h3>Instant day trading onboarding</h3>
+<p>Originally we need user to go through the onboarding and agree on terms and conditions after they are eligible to access this feature. The entry point was from homepage and push notifications.</p>
+<figure class="fig fig--pad" style="aspect-ratio:640/600"><img src="{{ '/assets/images/cases/dt-instant-1.gif' | relative_url }}" alt="" /></figure>
+<p>Now they can instanly access day trading in order page. Instanly deposit money to your day trading account. Instanly execute day trading.</p>
+<figure class="fig fig--pad" style="aspect-ratio:640/600"><img src="{{ '/assets/images/cases/dt-instant-2.gif' | relative_url }}" alt="" /></figure>
+<h2>Closing</h2>
+<p>Unfortunately i can't share any updates on the performance because i was impacted by my company downsizing. Half of the team got cut. But this project teached me a lot of valuable experience. I was able to execute a different methods of testing, iterating fast and run a full scale revamp. Not to mention that onboarding chaos teach me the mentality to build fast and fix fast. We have to be able to adapt to any situations in this day and age. Thank you for reading this study case until the end!</p>
+</article>
 
-<span class="section-label">Chapter 5 — Making it Even Faster</span>
-<p class="body-text">Following the successful launch, the goal was to eliminate the manual wallet transfer step — users can now access day trading from the order page directly, deposit instantly, and execute without switching wallets.</p>
+<p class="cs-nextlabel">Next project</p>
+<a class="cs-next" href="{{ '/work/cicil-checkout/' | relative_url }}">
+  <b>Transforming price simulations and checkout into more pleasant</b>
+  <span>cicil.co.id</span>
+</a>
 
-<div class="full-img"><img src="{{ '/assets/images/ajaib-faster.png' | relative_url }}" alt="Faster flow" /></div>
-
-<div class="divider"></div>
-
-<span class="section-label">Closing</span>
-<p class="body-text">Unfortunately I can't share post-Chapter 5 performance data — I was impacted by company downsizing shortly after. But this project taught me to move fast, test rigorously, and adapt.</p>
-
-<div class="bottom-nav">
-  <a class="bnav-link" href="{{ '/work/' | relative_url }}">
-    <span class="bnav-label">← Back</span>
-    All projects
-  </a>
+<div class="cs-bottomlinks">
+  <a href="#top" data-top>Back to top</a>
+  <a href="{{ '/' | relative_url }}">Back to homepage</a>
 </div>
-
-<script>
-(function(){
-  var outer=document.getElementById('outer');
-  var track=document.getElementById('track');
-  var frames=Array.from(document.querySelectorAll('.phone-frame'));
-  var tabs=Array.from(document.querySelectorAll('.ctab'));
-  var current=0;
-  var FRAME_W=220,GAP=24;
-  function getOffset(i){var outerW=outer.offsetWidth;var offset=i*(FRAME_W+GAP)-(outerW/2)+(FRAME_W/2);return Math.max(0,offset);}
-  function goTo(i,animate){i=Math.max(0,Math.min(frames.length-1,i));current=i;frames.forEach(function(f,idx){f.classList.toggle('active',idx===i);});tabs.forEach(function(t,idx){t.classList.toggle('active',idx===i);});if(animate!==false)track.classList.add('animating');track.style.transform='translateX(-'+getOffset(i)+'px)';}
-  track.addEventListener('transitionend',function(){track.classList.remove('animating');});
-  tabs.forEach(function(tab){tab.addEventListener('click',function(){goTo(parseInt(tab.dataset.i));});});
-  var didDrag=false;
-  frames.forEach(function(frame){frame.addEventListener('click',function(){if(!didDrag)goTo(parseInt(frame.dataset.i));});});
-  var startX=0,startOffset=0,isDragging=false;
-  function pointerDown(e){isDragging=true;didDrag=false;startX=e.touches?e.touches[0].clientX:e.clientX;startOffset=getOffset(current);track.classList.remove('animating');outer.classList.add('dragging');}
-  function pointerMove(e){if(!isDragging)return;var x=e.touches?e.touches[0].clientX:e.clientX;var diff=startX-x;if(Math.abs(diff)>4)didDrag=true;track.style.transform='translateX(-'+Math.max(0,startOffset+diff)+'px)';}
-  function pointerUp(e){if(!isDragging)return;isDragging=false;outer.classList.remove('dragging');if(!didDrag)return;var x=e.changedTouches?e.changedTouches[0].clientX:e.clientX;var diff=startX-x;goTo(Math.abs(diff)>40?(diff>0?current+1:current-1):current);}
-  outer.addEventListener('mousedown',pointerDown);
-  window.addEventListener('mousemove',pointerMove);
-  window.addEventListener('mouseup',pointerUp);
-  outer.addEventListener('touchstart',pointerDown,{passive:true});
-  window.addEventListener('touchmove',pointerMove,{passive:true});
-  window.addEventListener('touchend',pointerUp);
-  goTo(0,false);
-})();
-</script>

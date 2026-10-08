@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if page.title %}{{ page.title }} — {% endif %}Siry シリー</title>
+  {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}" />
+</head>
+<body class="site">
+  <div class="wrap {{ page.page_class }}">
+    {% include site-header.html %}
+    {{ content }}
+    {% include site-footer.html %}
+  </div>
+
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img alt="" />
+  </div>
+
+  <script>
+    (function(){
+      var root=document.documentElement;
+      var btn=document.getElementById('themeToggle');
+      if(btn) btn.addEventListener('click',function(){
+        var isDark=root.getAttribute('data-theme')==='dark'||
+          (!root.hasAttribute('data-theme')&&window.matchMedia('(prefers-color-scheme: dark)').matches);
+        var next=isDark?'light':'dark';
+        root.setAttribute('data-theme',next);
+        try{localStorage.setItem('theme',next);}catch(e){}
+      });
+
+      document.querySelectorAll('[data-top]').forEach(function(a){
+        a.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});
+      });
+
+      var lb=document.getElementById('lightbox'),big=lb.querySelector('img');
+      function open(s,a){big.src=s;big.alt=a||'';lb.classList.add('is-open');document.body.style.overflow='hidden';}
+      function close(){lb.classList.remove('is-open');document.body.style.overflow='';big.src='';}
+      document.querySelectorAll('.fig img,.cs-cover img').forEach(function(img){
+        img.style.cursor='zoom-in';
+        img.addEventListener('click',function(){open(img.currentSrc||img.src,img.alt);});
+      });
+      lb.querySelector('.lightbox-close').addEventListener('click',close);
+      lb.addEventListener('click',function(e){if(e.target===lb)close();});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+    })();
+  </script>
+  {{ page.scripts }}
+</body>
+</html>

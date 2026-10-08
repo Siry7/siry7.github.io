@@ -1,95 +1,140 @@
 ---
-layout: default
+layout: site
 title: Home
-body_class: home
+page_class: home
+description: Siry — Product (UI UX) designer currently studying Japanese in Kyoto.
 ---
 
-<div class="home">
-  <header class="home-header">
-    <a class="home-logo" href="{{ '/' | relative_url }}">Siry<span>シリー</span></a>
-    <button class="home-theme-btn" id="homeThemeBtn" type="button" aria-label="Toggle light / dark theme">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-        <path d="M13.68687 9.16667c-1.17448 3.02534-4.25469 4.86555-7.47531 4.46597-3.22062-0.39957-5.75775-2.9367-6.15733-6.15732-0.39957-3.22062 1.44064-6.30083 4.46598-7.47532-2.53131 2.53131-2.53131 6.63536 0 9.16667 2.5313 2.53131 6.63536 2.53131 9.16666 0" transform="translate(3.396459 2.916667)" stroke="currentColor" stroke-width="1.458" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-    </button>
-  </header>
+<div class="hero-art"><img src="{{ '/assets/images/hero-doodle.png' | relative_url }}" alt="" /></div>
 
-  <div class="home-hero-art"><img src="{{ '/assets/images/hero-doodle.png' | relative_url }}" alt="" /></div>
+<h1 class="home-h1">Hey, I’m Siry.</h1>
 
-  <h1 class="home-heading">Hey, I’m Siry.</h1>
+<div class="home-intro">
+  <p>Product (UI UX) designer currently studying Japanese in Kyoto</p>
+  <p>My work lives at the intersection of research, visual precision, and the quiet logic of how people move through a screen. I care about the small decisions that make everything feel easier. I’ve designed products for companies like Omnihr, Ajaib and Cicil.</p>
+  <p>Loved doing content creation and photography in my freetime.</p>
+</div>
 
-  <div class="home-intro">
-    <p>Product (UI UX) designer currently studying Japanese in Kyoto</p>
-    <p>My work lives at the intersection of research, visual precision, and the quiet logic of how people move through a screen. I care about the small decisions that make everything feel easier. I’ve designed products for companies like Ajaib and Cicil.</p>
-    <p>Loved doing content creation and photography in my freetime.</p>
+<section class="index">
+  <div class="index-section">
+    <span class="index-label">WORK</span>
+
+    {% assign companies = site.data.work %}
+    {% for c in companies %}
+    <div class="company" data-company>
+      <button class="company-row" type="button" aria-expanded="false">
+        <img class="company-logo" src="{{ c.logo | relative_url }}" alt="" />
+        <span class="company-name">{{ c.name }}</span>
+        <span class="company-rule"></span>
+        <span class="company-years">{{ c.years }}</span>
+        <svg class="company-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="projects-wrap">
+        <div class="projects">
+          <div class="projects-inner">
+            {% for p in c.projects %}
+            {% if p.url %}
+            <a class="project" href="{{ p.url | relative_url }}" data-thumb="{% if p.thumb %}{{ p.thumb | relative_url }}{% endif %}" data-title="{{ p.desc }}" data-meta="{{ c.name }} · {{ c.years }}">
+              <span class="project-title">{{ p.title }}<svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+              <span class="project-desc">{{ p.desc }}</span>
+            </a>
+            {% else %}
+            <div class="project" data-thumb="{% if p.thumb %}{{ p.thumb | relative_url }}{% endif %}" data-title="{{ p.desc }}" data-meta="{{ c.name }} · {{ c.years }}">
+              <span class="project-title">{{ p.title }}</span>
+              <span class="project-desc">{{ p.desc }}</span>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
   </div>
 
-  <section class="home-showcase">
-    <span class="home-section-label">Work showcase</span>
-
-    <a class="home-project" href="{{ '/work/ajaib/' | relative_url }}">
-      <div class="home-project-head">
-        <h3>Adapting day trading to the Indonesian market</h3>
-        <span>Ajaib Investment · 2023</span>
-      </div>
-      <div class="home-project-cover">
-        <img src="{{ '/assets/images/home-ajaib-daytrading.png' | relative_url }}" alt="Ajaib Day Trading" />
-      </div>
+  <div class="index-section index-side">
+    <span class="index-label">Freelance</span>
+    {% for s in site.data.freelance %}
+    {% if s.url %}
+    <a class="side-row" href="{{ s.url }}" target="_blank" rel="noopener">
+      <span class="side-title">{{ s.title }}</span>
+      <span class="side-rule"></span>
+      <span class="side-meta">{{ s.meta }}</span>
     </a>
-
-    <div class="home-project">
-      <div class="home-project-head">
-        <h3>Enhancing Ajaib's Auto-Trade feature for a seamless user experience</h3>
-        <span>Ajaib Investment · 2022</span>
-      </div>
-      <div class="home-project-cover home-project-cover--layered">
-        <img class="base" src="{{ '/assets/images/home-autotrade-1.png' | relative_url }}" alt="" />
-        <img class="l2" src="{{ '/assets/images/home-autotrade-2.png' | relative_url }}" alt="" />
-        <img class="l3" src="{{ '/assets/images/home-autotrade-3.png' | relative_url }}" alt="" />
-        <img class="l4" src="{{ '/assets/images/home-autotrade-4.png' | relative_url }}" alt="" />
-      </div>
+    {% else %}
+    <div class="side-row">
+      <span class="side-title">{{ s.title }}</span>
+      <span class="side-rule"></span>
+      <span class="side-meta">{{ s.meta }}</span>
     </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
 
-    <div class="home-project">
-      <div class="home-project-head">
-        <h3>New Cicil price simulations and checkout experience</h3>
-        <span>Cicil.co.id · 2021</span>
-      </div>
-      <div class="home-project-cover">
-        <img src="{{ '/assets/images/home-cicil-checkout.png' | relative_url }}" alt="Cicil Checkout" />
-      </div>
-    </div>
-
-    <div class="home-project">
-      <div class="home-project-head">
-        <h3>Membership onboarding gamifications</h3>
-        <span>Cicil.co.id · 2021</span>
-      </div>
-      <div class="home-project-cover">
-        <img src="{{ '/assets/images/home-cicil-membership.png' | relative_url }}" alt="Cicil Membership Onboarding" />
-      </div>
-    </div>
-  </section>
-
-  <footer class="home-footer">
-    <a href="https://www.linkedin.com/in/benedictusbio/" target="_blank">LinkedIn</a>
-    <span>•</span>
-    <a href="mailto:sirilusbio@gmail.com">Email</a>
-    <span>•</span>
-    <a href="{{ '/contact/' | relative_url }}">Contact</a>
-  </footer>
+<div class="hover-card" id="hoverCard" aria-hidden="true">
+  <div>
+    <div class="hover-card-title"></div>
+    <div class="hover-card-meta"></div>
+  </div>
+  <div class="hover-card-cover">
+    <img alt="" hidden />
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></svg>
+  </div>
 </div>
 
 <script>
 (function(){
-  var btn=document.getElementById('homeThemeBtn');
-  if(!btn) return;
-  function apply(t){document.documentElement.setAttribute('data-home-theme',t);}
-  btn.addEventListener('click',function(){
-    var current=document.documentElement.getAttribute('data-home-theme')==='light'?'light':'dark';
-    var next=current==='light'?'dark':'light';
-    apply(next);
-    try{localStorage.setItem('home-theme',next);}catch(e){}
+  /* Accordion ------------------------------------------------------- */
+  document.querySelectorAll('[data-company]').forEach(function(company){
+    var btn=company.querySelector('.company-row');
+    btn.addEventListener('click',function(){
+      var open=company.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+      if(!open) hide();
+    });
   });
+
+  /* Hover preview --------------------------------------------------- */
+  var card=document.getElementById('hoverCard');
+  if(!card) return;
+  var titleEl=card.querySelector('.hover-card-title');
+  var metaEl=card.querySelector('.hover-card-meta');
+  var imgEl=card.querySelector('.hover-card-cover img');
+  var iconEl=card.querySelector('.hover-card-cover svg');
+  var active=null;
+
+  function canShow(){return window.matchMedia('(min-width: 1280px)').matches;}
+
+  function place(el){
+    var r=el.getBoundingClientRect();
+    var h=card.offsetHeight;
+    var top=Math.min(Math.max(r.top-8,16),window.innerHeight-h-16);
+    card.style.top=top+'px';
+  }
+
+  function show(el){
+    if(!canShow()) return;
+    active=el;
+    titleEl.textContent=el.dataset.title||'';
+    metaEl.textContent=el.dataset.meta||'';
+    var src=el.dataset.thumb;
+    if(src){imgEl.src=src;imgEl.hidden=false;iconEl.style.display='none';}
+    else{imgEl.removeAttribute('src');imgEl.hidden=true;iconEl.style.display='block';}
+    place(el);
+    card.classList.add('is-visible');
+  }
+
+  function hide(){active=null;card.classList.remove('is-visible');}
+
+  document.querySelectorAll('.project').forEach(function(el){
+    el.addEventListener('mouseenter',function(){show(el);});
+    el.addEventListener('mouseleave',hide);
+    el.addEventListener('focus',function(){show(el);});
+    el.addEventListener('blur',hide);
+  });
+
+  window.addEventListener('scroll',function(){if(active)place(active);},{passive:true});
+  window.addEventListener('resize',function(){if(active){if(!canShow())hide();else place(active);}});
 })();
 </script>
