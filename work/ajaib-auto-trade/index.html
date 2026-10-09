@@ -23,7 +23,7 @@ description: Enhancing Ajaib's Auto-Trade feature for a seamless user experience
 <article class="cs-article">
 <h2>Background</h2>
 <p>Ajaib Securities is one of Indonesia's largest stock trading and investing platforms. It's also the fastest Southeast Asian startup to reach unicorn status, achieving this milestone in just two years. We offer a variety of features and products to support traders and investors, including the classic Auto Trade feature. However, after 1.5 years since its launch, we realized that the adoption performance of our Auto Trade feature was stagnant.</p>
-<figure class="fig" style="aspect-ratio:640/447"><img src="{{ '/assets/images/cases/at-background.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box" style="aspect-ratio:640/447"><img src="{{ '/assets/images/cases/at-background.png' | relative_url }}" alt="" /></figure>
 <h2>Chapter 0. Synopsis</h2>
 <h3>Problem statement</h3>
 <p>Despite the release of Ajaib's Auto Trade feature, adoption remained stagnant at around 10%, and the conversion rate of the feature was below 50%.</p>
@@ -33,48 +33,56 @@ description: Enhancing Ajaib's Auto-Trade feature for a seamless user experience
 <h3>Solutions overview</h3>
 <div class="defblock"><b>Simplified UI</b><p>Redesigned the interface to remove complex signage, allowing users to set prices easily.</p></div>
 <div class="defblock"><b>Guided onboarding</b><p>Implemented a step-by-step guide for new users.</p></div>
-<figure class="fig" style="aspect-ratio:640/427"><img src="{{ '/assets/images/cases/at-synopsis.jpg' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box" style="aspect-ratio:640/427"><img src="{{ '/assets/images/cases/at-synopsis.jpg' | relative_url }}" alt="" /></figure>
 <h2>Chapter 1. Understand</h2>
 <h3>Research, interview and data</h3>
 <p>Starting this project involved understanding how users perceive our feature and their behavior while using our product. We conducted three different types of research to strengthen our hypothesis.</p>
 <div class="defblock"><b>Conversation with the devs team</b><p>We gained insights that current users were confused about how to set up the rules for Auto Trade.</p></div>
 <div class="defblock"><b>Conversation with direct users</b><p>We learned that users often created incorrect rule sets to trigger the Auto Trade order due to confusing trigger price rules using ≤ and ≥ symbols. Other user-friendly platforms do not use these symbols.</p></div>
 <div class="defblock"><b>Data analysis</b><p>We reviewed data from the product's launch to recent times on how users usually set the trigger price rules. It turns out more than 50% of users set the trigger price the same as the order price they want. This suggests that users do not fully understand how to utilize the feature and opt for the safe options.</p></div>
-<figure class="fig fig--pair" style="aspect-ratio:640/314">
-  <span><img src="{{ '/assets/images/cases/at-data-1.png' | relative_url }}" alt="" /></span>
-  <span><img src="{{ '/assets/images/cases/at-data-2.png' | relative_url }}" alt="" /></span>
+<figure class="fig fig--row" style="aspect-ratio:640/314">
+  <span class="is-framed"><img src="{{ '/assets/images/cases/at-data-1.png' | relative_url }}" alt="" /></span>
+  <span class="is-framed"><img src="{{ '/assets/images/cases/at-data-2.png' | relative_url }}" alt="" /></span>
 </figure>
 <div class="defblock"><b>Trigger price</b><p>We took all the data from the first time launch of the product until recent on how they usually set the trigger price rules. Turns out more than 50% users set the trigger price same as order price they want to get. This sparks more hypothesis that current user don't know how to fully utilize the feature and go with the safe options.</p></div>
 <div class="defblock"><b>Limit price or order price</b><p>This is the specific price at which you want to buy or sell a stock. For buying, it's the highest price you're willing to pay, and for selling, it's the lowest price you're willing to accept. It's like saying you will buy a product only if you can get it for a certain price or less, or sell it only if you can get a certain price or more.</p></div>
 <h3>Problem statement</h3>
 <p>50% of the feature adopters chose to set the trigger price the same as the limit/order price because they don't have the technical skill to create good trigger rules, causing the conversion rate of the order to be below 50%.</p>
-<figure class="fig fig--pad" style="aspect-ratio:640/560"><img src="{{ '/assets/images/cases/at-problem-phone.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box fig--show" style="aspect-ratio:640/560">
+  <img src="{{ '/assets/images/cases/at-problem-phone.png' | relative_url }}" alt="" />
+</figure>
 <h2>Chapter 2. Craft</h2>
 <h3>The solutions</h3>
 <p>After extensive brainstorming sessions, I came up with an experimental idea. As the data indicated, users struggled with the conditions due to the ≤ and ≥ symbols. I aimed to simplify this by allowing users to input the price without needing to think about the symbols.</p>
-<figure class="fig" style="aspect-ratio:640/437"><img src="{{ '/assets/images/cases/at-solutions.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box" style="aspect-ratio:640/437"><img src="{{ '/assets/images/cases/at-solutions.png' | relative_url }}" alt="" /></figure>
 <h3>Focusing on what matters</h3>
 <p>With data confirming our hypothesis that users have trouble setting up rules for the trigger price, it was clear we needed to make this experience easier for everyone. We prepared two steps for easier auto trading.</p>
-<figure class="fig fig--pad" style="aspect-ratio:640/560"><img src="{{ '/assets/images/cases/at-focus.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box fig--show" style="aspect-ratio:640/560">
+  <img src="{{ '/assets/images/cases/at-focus.png' | relative_url }}" alt="" />
+</figure>
 <p class="kicker">Solutions 1</p>
 <h3>Auto trade that automatically helps you</h3>
 <p>Now, any trader, no matter how inexperienced, can use Auto Trade effectively. Just input the desired order price, and we'll take care of the rest. Trade with comfort and confidence. You can still craft your own trading plan as usual, with no limitations on any type of trader.</p>
-<figure class="fig fig--pad" style="aspect-ratio:640/600"><img src="{{ '/assets/images/cases/at-autotrade.gif' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box fig--show" style="aspect-ratio:640/600">
+  <img src="{{ '/assets/images/cases/at-autotrade.gif' | relative_url }}" alt="" style="--r:35px" />
+</figure>
 <h3>Auto generated trigger price</h3>
 <p>Breaking the status quo, our Auto Trade feature generates the trigger price to follow the market, creating the best situation for you at that moment.</p>
 <p class="kicker">Solutions 2</p>
 <h3>Not just a feature but a helpful guidance</h3>
 <p>We redesigned the content and layout for the onboarding page to make it visually fresher and more appealing, with much more content to help new users understand how to utilize the Auto Trade feature.</p>
-<figure class="fig fig--pair" style="aspect-ratio:640/520">
-  <span><img src="{{ '/assets/images/cases/at-old-1.png' | relative_url }}" alt="" /></span>
-  <span><img src="{{ '/assets/images/cases/at-old-2.png' | relative_url }}" alt="" /></span>
+<figure class="fig fig--box fig--show" style="aspect-ratio:640/520">
+  <img src="{{ '/assets/images/cases/at-old-1.png' | relative_url }}" alt="" />
+  <img src="{{ '/assets/images/cases/at-old-2.png' | relative_url }}" alt="" />
 </figure>
 <p class="kicker">From this</p>
 {% include shots.html tabs="Sell · Overview|Sell · Details|Buy · Overview|Buy · Details" files="/assets/images/cases/at-new-1.png|/assets/images/cases/at-new-2.png|/assets/images/cases/at-new-3.png|/assets/images/cases/at-new-4.png" %}
 <p class="kicker">To this. Rate the glow up 🤩</p>
 <h3>Helpful guide to trade</h3>
 <p>Not just spoiling our users with an easy feature, we also want them to actually understand the logic and strategy behind auto trading. We gave them clear explanations of the terms and described the logic with scenarios.</p>
-<figure class="fig fig--pad" style="aspect-ratio:640/600"><img src="{{ '/assets/images/cases/at-guide.gif' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box fig--show" style="aspect-ratio:640/600">
+  <img src="{{ '/assets/images/cases/at-guide.gif' | relative_url }}" alt="" style="--r:40px" />
+</figure>
 <h2>Chapter 3. Learning</h2>
 <h3>Take aways</h3>
 <p>This project taught me a lot about flexibility in crafting solutions.</p>

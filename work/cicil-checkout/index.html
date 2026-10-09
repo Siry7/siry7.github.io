@@ -23,9 +23,9 @@ description: New Cicil price simulations and checkout experience.
 <article class="cs-article">
 <h2>Background</h2>
 <p>CICIL is one of the biggest education funding companies in Indonesia. Our goal is to facilitate students' needs to ensure they have everything necessary to excel in their education. While student loans are popular in the US, they are a new concept for Indonesian citizens.</p>
-<figure class="fig" style="aspect-ratio:640/360"><img src="{{ '/assets/images/cases/cc-background.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box" style="aspect-ratio:640/360"><img src="{{ '/assets/images/cases/cc-background.png' | relative_url }}" alt="" /></figure>
 <h2>How Cicil works</h2>
-<figure class="fig" style="aspect-ratio:640/378"><img src="{{ '/assets/images/cases/cc-how.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box" style="aspect-ratio:640/378"><img src="{{ '/assets/images/cases/cc-how.png' | relative_url }}" alt="" /></figure>
 <h2>Chapter 0. Synopsis</h2>
 <h3>Problems</h3>
 <p>The existing checkout page was plagued by difficult loan terms and a cluttered design. The inability to switch links when students wanted to try another simulation also contributed to a ridiculously high drop rate. Confusing installment and limit information disturbed the price simulations and checkout experience.</p>
@@ -37,9 +37,9 @@ description: New Cicil price simulations and checkout experience.
 </ul>
 <h3>Challenges and constraints</h3>
 <p>This was my first major redesign project and also one of the most important parts of CICIL's product journey. I had to manage this project while I was only five months into product design, and all the research was done during early COVID-19. The research process was difficult because we needed to conduct all interviews and usability testing using online tools.</p>
-<figure class="fig fig--pair" style="aspect-ratio:640/314">
-  <span><img src="{{ '/assets/images/cases/cc-old-1.png' | relative_url }}" alt="" /></span>
-  <span><img src="{{ '/assets/images/cases/cc-old-2.png' | relative_url }}" alt="" /></span>
+<figure class="fig fig--row" style="aspect-ratio:640/314">
+  <span class="is-framed"><img src="{{ '/assets/images/cases/cc-old-1.png' | relative_url }}" alt="" /></span>
+  <span class="is-framed"><img src="{{ '/assets/images/cases/cc-old-2.png' | relative_url }}" alt="" /></span>
 </figure>
 <p class="kicker">Old checkout page with a lot of unclear structure of number calculations</p>
 <h2>Chapter 1. Understand</h2>
@@ -59,12 +59,12 @@ description: New Cicil price simulations and checkout experience.
   <div><b>34.7s</b><span>Avg duration to success</span></div>
 </div>
 
-<figure class="fig fig--pair" style="aspect-ratio:640/393">
-  <span><img src="{{ '/assets/images/cases/cc-maze-1.png' | relative_url }}" alt="" /></span>
-  <span><img src="{{ '/assets/images/cases/cc-maze-2.jpg' | relative_url }}" alt="" /></span>
-  <span><img src="{{ '/assets/images/cases/cc-maze-3.jpg' | relative_url }}" alt="" /></span>
-  <span><img src="{{ '/assets/images/cases/cc-maze-4.jpg' | relative_url }}" alt="" /></span>
-  <span><img src="{{ '/assets/images/cases/cc-maze-5.jpg' | relative_url }}" alt="" /></span>
+<figure class="fig fig--box fig--show" style="aspect-ratio:640/393">
+  <img src="{{ '/assets/images/cases/cc-maze-1.png' | relative_url }}" alt="" />
+  <img src="{{ '/assets/images/cases/cc-maze-2.jpg' | relative_url }}" alt="" />
+  <img src="{{ '/assets/images/cases/cc-maze-3.jpg' | relative_url }}" alt="" />
+  <img src="{{ '/assets/images/cases/cc-maze-4.jpg' | relative_url }}" alt="" />
+  <img src="{{ '/assets/images/cases/cc-maze-5.jpg' | relative_url }}" alt="" />
 </figure>
 <h3>What we learned so far?</h3>
 <ul>
@@ -89,28 +89,28 @@ description: New Cicil price simulations and checkout experience.
   <li>Confusing credit limit information.</li>
   <li>Cluttered information overshadowing main information.</li>
 </ul>
-<figure class="fig" style="aspect-ratio:640/448"><img src="{{ '/assets/images/cases/cc-problem.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box" style="aspect-ratio:640/448"><img src="{{ '/assets/images/cases/cc-problem.png' | relative_url }}" alt="" /></figure>
 <h2>Chapter 2. Craft</h2>
 <h3>Deliverables</h3>
 <p>Based on our research and testing, we made several design changes:</p>
-<figure class="fig" style="aspect-ratio:640/448"><img src="{{ '/assets/images/cases/cc-deliverables-flat.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box" style="aspect-ratio:640/448"><img src="{{ '/assets/images/cases/cc-deliverables-flat.png' | relative_url }}" alt="" /></figure>
 <p class="kicker">Design deliverables</p>
 <h3>Visually fresher design</h3>
 <p>Simplified UI to make the experience easier for users.</p>
 <h3>Every section crafted with a user-centered mindset</h3>
 <p>As we found out that our users like to try different links to simulate the price, we understood that it is one of the reasons our drop rate is high. Adding a shortcut link crawler form is the key to make the experience seamless and reduce drops.</p>
-<figure class="fig" style="aspect-ratio:640/561"><img src="{{ '/assets/images/cases/cc-section.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box" style="aspect-ratio:640/561"><img src="{{ '/assets/images/cases/cc-section.png' | relative_url }}" alt="" /></figure>
 <p class="kicker">Deliverables 1</p>
 <h3>We understand that users came to our app with clear intention to buy a specific product, not browsing</h3>
 <p>We're not a marketplace. We're a 3rd party payment app. Users came to our app with a specific mental model. They already knew the stuff they wanted to buy after browsing in the marketplace. Instead of making the product card take up half of the space, we decided to cut a lot of unimportant information and make it more compact.</p>
-<figure class="fig fig--pair" style="aspect-ratio:640/314">
+<figure class="fig fig--row" style="aspect-ratio:640/314">
   <span><img src="{{ '/assets/images/cases/cc-d1-1.png' | relative_url }}" alt="" /></span>
   <span><img src="{{ '/assets/images/cases/cc-d1-2.png' | relative_url }}" alt="" /></span>
 </figure>
 <p class="kicker">Deliverables 2</p>
 <h3>Switch link whenever you want</h3>
 <p>Users can switch links to simulate different prices seamlessly.</p>
-<figure class="fig fig--pair" style="aspect-ratio:640/314">
+<figure class="fig fig--row" style="aspect-ratio:640/314">
   <span><img src="{{ '/assets/images/cases/cc-d2-1.png' | relative_url }}" alt="" /></span>
   <span><img src="{{ '/assets/images/cases/cc-d2-2.png' | relative_url }}" alt="" /></span>
 </figure>
@@ -120,14 +120,18 @@ description: New Cicil price simulations and checkout experience.
 <p class="kicker">Deliverables 4</p>
 <h3>New and improved limit card</h3>
 <p>Visual cues replaced confusing numbers, indicating available limit usage clearly.</p>
-<figure class="fig fig--pad" style="aspect-ratio:640/600"><img src="{{ '/assets/images/cases/cc-limit.gif' | relative_url }}" alt="" /></figure>
-<figure class="fig fig--pad" style="aspect-ratio:640/360"><img src="{{ '/assets/images/cases/cc-limit-old.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box fig--show" style="aspect-ratio:640/600">
+  <img src="{{ '/assets/images/cases/cc-limit.gif' | relative_url }}" alt="" />
+</figure>
+<figure class="fig fig--box fig--show" style="aspect-ratio:640/360">
+  <img src="{{ '/assets/images/cases/cc-limit-old.png' | relative_url }}" alt="" />
+</figure>
 <h3>How it used to be</h3>
 <p>Full of numbers that don't make sense if we really count them. It looks like a multiplication but it's not. The numbers are all over the place, while all the student cares about is whether they can still purchase this product with the current limit.</p>
 <h3>Now it's easier to scan quickly</h3>
 <p>Green indicates how much limit will be used from your current available limit. Adding a checklist indicator makes it clearer.</p>
 <p>If students run out of limit, they cannot continue with the checkout. Increase the down payment or buy cheaper stuff.</p>
-<figure class="fig fig--pair" style="aspect-ratio:640/314">
+<figure class="fig fig--row" style="aspect-ratio:640/314">
   <span><img src="{{ '/assets/images/cases/cc-limit-new-1.png' | relative_url }}" alt="" /></span>
   <span><img src="{{ '/assets/images/cases/cc-limit-new-2.png' | relative_url }}" alt="" /></span>
 </figure>
@@ -135,7 +139,9 @@ description: New Cicil price simulations and checkout experience.
 <p class="kicker">Bonus explorations</p>
 <h3>Adding loading animations to make it more fun</h3>
 <p>Some students who live in rural areas might face a longer load while crawling the product from other marketplaces. I tried to empathize with their waiting time and added a loading animation to make them feel that the loading is happening.</p>
-<figure class="fig fig--pad" style="aspect-ratio:640/412"><img src="{{ '/assets/images/cases/cc-loading.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box fig--show" style="aspect-ratio:640/412">
+  <img src="{{ '/assets/images/cases/cc-loading.png' | relative_url }}" alt="" />
+</figure>
 <h2>Chapter 3. Learning</h2>
 <h3>Learning and take aways</h3>
 <p>This project, my biggest solo project so far at CICIL, taught me a lot about communication with PMs, engineers, internal stakeholders, and users. Starting just 4-5 months after joining CICIL (my first full-time job as a Product Designer), I learned to craft good visuals, communicate my design, take criticism, and understand user needs.</p>

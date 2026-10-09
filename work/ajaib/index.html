@@ -27,10 +27,12 @@ description: Adapting day trading to the Indonesian stock market.
 <p>Ajaib Securities is one of Indonesia's largest stock trading and investing platforms. It's also the fastest Southeast Asian startup to reach unicorn status, achieving this milestone in just two years. We offer a variety of features and products to support traders and investors.</p>
 <h2>How it started</h2>
 <p>This project started from an upper management initiative to replicate the big success of India's investment/trading app. When starting this project, I had no context about this feature. The only thing I knew was that this feature is somewhat similar to our current existing feature, margin trading. Basically, we gave leverage to our users for their trading and targeted the trading fee as our goal.</p>
-<figure class="fig" style="aspect-ratio:640/360"><img src="{{ '/assets/images/cases/dt-started.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box" style="aspect-ratio:640/360"><img src="{{ '/assets/images/cases/dt-started.png' | relative_url }}" alt="" /></figure>
 <h2>But first, quick context about margin trading</h2>
 <p>Margin trading allows you to borrow money from your brokerage to buy more stocks than you could with just your own money. It's like taking a loan to invest in the stock market.</p>
-<figure class="fig fig--pad" style="aspect-ratio:640/520"><img src="{{ '/assets/images/cases/dt-margin.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box fig--pad fig--show" style="aspect-ratio:640/520">
+  <img src="{{ '/assets/images/cases/dt-margin.png' | relative_url }}" alt="" />
+</figure>
 <h3>How it works:</h3>
 <ul>
   <li>Initial Investment: You deposit a certain amount of money into your brokerage account. This is your margin.</li>
@@ -41,7 +43,7 @@ description: Adapting day trading to the Indonesian stock market.
 <h3>What's the difference?</h3>
 <p>While margin trading allows you to hold the stock you bought with your margin buying power, day trading only allows you to hold the stock until the end of market hours but with bigger leverage. If users haven't sold the stocks, we will force-sell the stocks using market price.</p>
 <p>You also need around $12,200 (depends on the rupiah to USD rate) to have access to margin trading, while you can deposit any amount to use day trading directly.</p>
-<figure class="fig" style="aspect-ratio:640/359"><img src="{{ '/assets/images/cases/dt-difference.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box" style="aspect-ratio:640/359"><img src="{{ '/assets/images/cases/dt-difference.png' | relative_url }}" alt="" /></figure>
 <p>Now that we know the fundamental difference between margin trading and day trading, let's jump into the design process, shall we?</p>
 <h2>Project overview</h2>
 <p>While margin trading allows you to hold the stock you bought with your margin buying power, day trading only allows you to hold the stock until the end of market hour but with bigger leverage. If users haven't sold the stocks, we will force sell the stocks using market price.</p>
@@ -56,13 +58,13 @@ description: Adapting day trading to the Indonesian stock market.
 <h2>Chapter 1. Product foundations</h2>
 <p>Having leverage without needing a massive amount of deposits and being free of loan fees sounds good, right? But what is the downside? How can a broker give away money without any return benefits? Is it a fee? Is it something that users might regret later?</p>
 <p>To make sure that this feature has its own benefits and differences from margin trading, we wanted to make the fundamentals clear and useful to our users. Everyone pitched in their ideas on how to fully function this product to live. There were a lot of ideas thrown around, but ultimately we decided on something like this:</p>
-<figure class="fig fig--pair" style="aspect-ratio:640/314">
-  <span><img src="{{ '/assets/images/cases/dt-foundation-1.png' | relative_url }}" alt="" /></span>
-  <span><img src="{{ '/assets/images/cases/dt-foundation-2.png' | relative_url }}" alt="" /></span>
+<figure class="fig fig--box fig--show" style="aspect-ratio:640/314">
+  <img src="{{ '/assets/images/cases/dt-foundation-1.png' | relative_url }}" alt="" class="is-framed" style="--r:12px" />
+  <img src="{{ '/assets/images/cases/dt-foundation-2.png' | relative_url }}" alt="" class="is-framed" style="--r:12px" />
 </figure>
 <h3>Market research and product fit</h3>
 <p>To fully understand how our users will react to this feature, we conducted full-scale research, starting from gathering users that match our criteria (our users' database indicates that we have around 25.7%-34.2% of users that match our criteria of who most likely will use this feature) and invited them for an interview and concept testing the first iteration of the feature.</p>
-<figure class="fig" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-research.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-research.png' | relative_url }}" alt="" /></figure>
 <p>While the concept testing went smoothly because it basically just changed your balance to your day trading balance on the trading page, there was lingering doubt that people weren't getting the correct idea about this product.</p>
 <ul>
   <li>Is this a loan? I don't want to use a loan to trade.</li>
@@ -72,20 +74,20 @@ description: Adapting day trading to the Indonesian stock market.
 <p>Basically, our users are cautious because they don't want to get a big loss while they want to get a bigger profit. One of the important user criteria is their trading value is around $60-$100 per day. That amount of money is big for Indonesians but also indicates these people can't afford to spend a lot on trading. It might be for safety, or they might not have more cold money to trade. So this higher risk is alarming to them.</p>
 <h3>Risk management and leverage</h3>
 <p>We understand that our users are concerned about their possibility of multiplied loss, fees, and end-of-day force-sell. How we turned it around is by informing them in the onboarding that to maintain their safety, we implemented force-sell at the end of the market. The intention is to brand that force-sell is not a downside but instead a risk management mechanism. Two birds with one stone. We also stated that we will not charge any fee for the leverage because we get our leverage back after the force-sell. Also, we are forbidden to write "Loan" at any cost.</p>
-<figure class="fig" style="aspect-ratio:640/378"><img src="{{ '/assets/images/cases/dt-risk.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box" style="aspect-ratio:640/378"><img src="{{ '/assets/images/cases/dt-risk.png' | relative_url }}" alt="" /></figure>
 <h2>Chapter 2. Haircut value</h2>
 <p>What is haircut value? It's basically our term to explain the risk of the stocks. For example, stock A and stock B can have different haircut values based on the risk of the stocks. The haircut value will determine how much buying power will be reduced.</p>
-<figure class="fig" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-haircut.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-haircut.png' | relative_url }}" alt="" /></figure>
 <p>This haircut value comes from our risk team. But the problem was, the information about how much haircut value of every stock is confidential 💀. How do we even convince our users who already have doubts about this product that you can trade stocks at a certain value but it turns out reducing a lot more of your buying power without any explanations?</p>
 <h3>Introducing multiplier</h3>
 <p>In an attempt to make this feature more user-friendly, I proposed that instead of using this haircut value concept, we use multiplier instead. This means that when a relatively safer stock is involved, users can use 100% of their buying power with the multiplier of 5x buying power (at the time we only allowed 5x). If the stock is more volatile, we only allow you to buy the stock 2x-4x of your buying power.</p>
 <p>This idea was a homerun from me. Not only does it make the haircut value clearer, but it is also used as a tool to attract more trades. You can see the list of stocks and some stocks that have higher multiplier becoming desirable stocks to trade.</p>
-<figure class="fig" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-multiplier.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-multiplier.png' | relative_url }}" alt="" /></figure>
 <h3>Day trading ratio</h3>
 <p>Another thing to mention about all of this is the haircut value or Day Trade ratio (DT ratio). This is basically an indicator to measure your risk. As I explained above, higher-risk stocks mean a higher haircut value (or lower multiplier). We want to make sure that your leverage margin is safe. The percentage indicates how much buying power is used and the portfolio risk value. So the higher the ratio, the higher the risk you hold. We want to help users maintain their safety by using percentage and color cues. Additionally, if you reach a 90% ratio, we would have to force-sell some of your stocks to keep your ratio healthy.</p>
 <h3>New fish tank methods</h3>
 <p>Just like you are not supposed to throw your fish directly into new water in the tank, we want to gradually introduce users to the benefits of day trading multipliers. Instead of applying the multiplier to a wide range of stocks, which would result in a lower multiplier (affecting the day trade ratio and available buying power differently with each trade), we want our users to first adapt to the concept by releasing only a 5x or maximum multiplier with low risk. This means if you trade an amount x, your used buying power would be x, and the ratio should reflect the percentage. While a lower multiplier may cause higher usage and a higher ratio.</p>
-<figure class="fig" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-fishtank.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-fishtank.png' | relative_url }}" alt="" /></figure>
 <p>To tackle this problem, we agreed to introduce the multiplier gradually. Instead of releasing this feature to all stocks with various buying powers, we only released it to blue-chip stocks that are relatively safer, with all of them having 5x buying power. So if you have 10 million buying power, you can use it as 10 million, while it's not the case if you bought a lower multiplier stock.</p>
 <p class="lead">“Can we have this feature on more volatile stocks?”</p>
 <p>There was a lot of feedback from the users requesting day trading to be eligible for more volatile stocks so they could get a better profit. I'll take this as a successful strategy.</p>
@@ -109,7 +111,7 @@ description: Adapting day trading to the Indonesian stock market.
 <p>Easy. We put all this "agreement" into our main T&amp;C. So for our new users, this feature will be fully eligible for them (if they are in our user criteria). We could scrape all the account verifications part because all the filtering is done on the account level.</p>
 <h2>Chapter 4. Update after 2 months of release date</h2>
 <p>I can proudly say that our MVP release is a huge success. Here are some facts about this project that I can present:</p>
-<figure class="fig" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-update.png' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box" style="aspect-ratio:640/382"><img src="{{ '/assets/images/cases/dt-update.png' | relative_url }}" alt="" /></figure>
 <ul>
   <li>75.5% adoption rate after release.</li>
   <li>Quarterly daily trading volume goals achieved only in 2 months.</li>
@@ -117,15 +119,21 @@ description: Adapting day trading to the Indonesian stock market.
 </ul>
 <h2>Chapter 5. Even faster trading experience</h2>
 <p>With the successful product launch, upper management wants this feature to be even more accessible and faster to execute. The goal was to make this feature more seamless when trading, meaning that we need to cut some of the original flow, like how users were required to move their rupiah balance to the day trading wallet before they could start trading with the day trading balance.</p>
-<figure class="fig" style="aspect-ratio:640/427"><img src="{{ '/assets/images/cases/dt-faster.jpg' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box" style="aspect-ratio:640/427"><img src="{{ '/assets/images/cases/dt-faster.jpg' | relative_url }}" alt="" /></figure>
 <h3>Switch between trading methods</h3>
 <p>Because the objective was to make this trading even faster and more seamless, we're changing the mental model.</p>
-<figure class="fig fig--pad" style="aspect-ratio:640/600"><img src="{{ '/assets/images/cases/dt-switch.gif' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box fig--pad fig--show" style="aspect-ratio:640/600">
+  <img src="{{ '/assets/images/cases/dt-switch.gif' | relative_url }}" alt="" style="--r:43px" />
+</figure>
 <h3>Instant day trading onboarding</h3>
 <p>Originally we need user to go through the onboarding and agree on terms and conditions after they are eligible to access this feature. The entry point was from homepage and push notifications.</p>
-<figure class="fig fig--pad" style="aspect-ratio:640/600"><img src="{{ '/assets/images/cases/dt-instant-1.gif' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box fig--pad fig--show" style="aspect-ratio:640/600">
+  <img src="{{ '/assets/images/cases/dt-instant-1.gif' | relative_url }}" alt="" style="--r:41px" />
+</figure>
 <p>Now they can instanly access day trading in order page. Instanly deposit money to your day trading account. Instanly execute day trading.</p>
-<figure class="fig fig--pad" style="aspect-ratio:640/600"><img src="{{ '/assets/images/cases/dt-instant-2.gif' | relative_url }}" alt="" /></figure>
+<figure class="fig fig--box fig--pad fig--show" style="aspect-ratio:640/600">
+  <img src="{{ '/assets/images/cases/dt-instant-2.gif' | relative_url }}" alt="" style="--r:41px" />
+</figure>
 <h2>Closing</h2>
 <p>Unfortunately i can't share any updates on the performance because i was impacted by my company downsizing. Half of the team got cut. But this project teached me a lot of valuable experience. I was able to execute a different methods of testing, iterating fast and run a full scale revamp. Not to mention that onboarding chaos teach me the mentality to build fast and fix fast. We have to be able to adapt to any situations in this day and age. Thank you for reading this study case until the end!</p>
 </article>
