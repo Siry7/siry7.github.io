@@ -1,22 +1,46 @@
 {%- assign labels = include.tabs | split: "|" -%}
 {%- assign files = include.files | split: "|" -%}
 <div class="shots" data-shots>
+  <div class="shots-head">
+    <span class="shots-count">01 / {{ labels.size | prepend: "0" | slice: -2, 2 }}</span>
+    <span class="shots-label">{{ labels[0] }}</span>
+  </div>
+
   <div class="shots-tabs" role="tablist">
     {%- for label in labels %}
-    <button class="shots-tab{% if forloop.first %} is-active{% endif %}" type="button" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"><i>{{ forloop.index | prepend: "0" | slice: -2, 2 }}</i>{{ label }}</button>
+    <button class="shots-tab{% if forloop.first %} is-active{% endif %}" type="button" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" data-label="{{ label }}"><i>{{ forloop.index | prepend: "0" | slice: -2, 2 }}</i>{{ label }}</button>
     {%- endfor %}
   </div>
+
   <div class="shots-stage">
     <button class="shots-nav" type="button" data-prev aria-label="Previous screen">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
     </button>
-    <div class="shots-slides">
-      {%- for file in files %}
-      <img class="{% if forloop.first %}is-active{% endif %}" src="{{ file | relative_url }}" alt="{{ labels[forloop.index0] }}" {% unless forloop.first %}loading="lazy"{% endunless %} />
-      {%- endfor %}
+    <div class="shots-viewport">
+      <div class="shots-track">
+        {%- for file in files %}
+        <img class="{% if forloop.first %}is-active{% endif %}" src="{{ file | relative_url }}" alt="{{ labels[forloop.index0] }}" {% unless forloop.first %}loading="lazy"{% endunless %} />
+        {%- endfor %}
+      </div>
     </div>
     <button class="shots-nav" type="button" data-next aria-label="Next screen">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
     </button>
+  </div>
+
+  <div class="shots-controls">
+    <div class="shots-dots">
+      {%- for label in labels %}
+      <button class="shots-dot{% if forloop.first %} is-active{% endif %}" type="button" aria-label="Go to {{ label }}"></button>
+      {%- endfor %}
+    </div>
+    <div class="shots-arrows">
+      <button class="shots-nav shots-nav--sm" type="button" data-prev aria-label="Previous screen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <button class="shots-nav shots-nav--sm" type="button" data-next aria-label="Next screen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
   </div>
 </div>
