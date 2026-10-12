@@ -20,7 +20,7 @@
 
   <div id="lightbox" class="lightbox">
     <button class="lightbox-close" aria-label="Close">&times;</button>
-    <img alt="" />
+    <div class="lightbox-body"></div>
   </div>
 
   <script>
@@ -93,12 +93,25 @@
         a.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});
       });
 
-      var lb=document.getElementById('lightbox'),big=lb.querySelector('img');
-      function open(s,a){big.src=s;big.alt=a||'';lb.classList.add('is-open');document.body.style.overflow='hidden';}
-      function close(){lb.classList.remove('is-open');document.body.style.overflow='';big.src='';}
+      var lb=document.getElementById('lightbox'),body=lb.querySelector('.lightbox-body');
+      function open(node){
+        body.textContent='';
+        body.appendChild(node);
+        lb.classList.add('is-open');
+        document.body.style.overflow='hidden';
+      }
+      function close(){lb.classList.remove('is-open');document.body.style.overflow='';body.textContent='';}
       document.querySelectorAll('.fig img,.cs-cover img').forEach(function(img){
         img.style.cursor='zoom-in';
-        img.addEventListener('click',function(){open(img.currentSrc||img.src,img.alt);});
+        img.addEventListener('click',function(){
+          // composed figures (cropped screenshots, animated overlays) zoom as a whole
+          var wrap=img.closest('.shot-stack,.shot-crop');
+          if(wrap){open(wrap.cloneNode(true));return;}
+          var c=new Image();
+          c.src=img.currentSrc||img.src;
+          c.alt=img.alt||'';
+          open(c);
+        });
       });
       lb.querySelector('.lightbox-close').addEventListener('click',close);
       lb.addEventListener('click',function(e){if(e.target===lb)close();});

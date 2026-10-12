@@ -222,7 +222,7 @@ a.side-row:hover{opacity:.65}
 .shot-stack>img{display:block;height:100%;width:auto;max-width:100%;border-radius:inherit}
 .shot-stack>.shot-anim{
   position:absolute;top:32.67%;left:50%;transform:translateX(-50%);
-  width:62.86%;display:block;line-height:0;background:#fff;
+  width:62.86%;display:block;line-height:0;background:#fff;isolation:isolate;
 }
 .shot-stack>.shot-anim>img{display:block;width:100%;height:auto;border-radius:0;mix-blend-mode:multiply}
 
@@ -312,7 +312,10 @@ a.side-row:hover{opacity:.65}
   padding:2rem 1rem;background:rgba(8,8,7,.94);backdrop-filter:blur(6px);
 }
 .lightbox.is-open{display:flex}
-.lightbox img{max-width:min(1400px,96vw);max-height:95vh;width:auto;height:auto;object-fit:contain;border-radius:8px}
+.lightbox-body{display:flex;align-items:center;justify-content:center;max-width:96vw;max-height:95vh}
+.lightbox-body>img{max-width:min(1400px,96vw);max-height:95vh;width:auto;height:auto;object-fit:contain;border-radius:8px}
+.lightbox-body>.shot-stack,.lightbox-body>.shot-crop{height:min(95vh,860px);max-width:96vw;border-radius:12px}
+.lightbox-body>.shot-stack>img{height:100%;width:auto}
 .lightbox-close{
   position:absolute;top:1rem;right:1rem;width:36px;height:36px;border-radius:50%;
   border:1px solid rgba(237,237,237,.25);background:transparent;color:#EDEDED;
