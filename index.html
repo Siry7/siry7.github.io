@@ -59,8 +59,8 @@ description: Siry — Product (UI UX) designer currently studying Japanese in Ky
     <span class="index-label">Freelance</span>
     {% for s in site.data.freelance %}
     {% if s.url %}
-    <a class="side-row" href="{{ s.url }}" target="_blank" rel="noopener">
-      <span class="side-title">{{ s.title }}</span>
+    <a class="side-row" href="{{ s.url }}" target="_blank" rel="noopener" data-thumb="{% if s.thumb %}{{ s.thumb | relative_url }}{% endif %}" data-title="{{ s.title }}" data-meta="Freelance">
+      <span class="side-title">{{ s.title }}<svg class="side-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
       <span class="side-rule"></span>
       <span class="side-meta">{{ s.meta }}</span>
     </a>
@@ -130,7 +130,7 @@ description: Siry — Product (UI UX) designer currently studying Japanese in Ky
 
   function hide(){active=null;card.classList.remove('is-visible');}
 
-  document.querySelectorAll('.project').forEach(function(el){
+  document.querySelectorAll('.project, .side-row').forEach(function(el){
     el.addEventListener('mouseenter',function(){show(el);});
     el.addEventListener('mouseleave',hide);
     el.addEventListener('focus',function(){show(el);});

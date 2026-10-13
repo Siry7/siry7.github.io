@@ -135,11 +135,12 @@ a.project:hover .project-arrow,a.project:focus-visible .project-arrow{opacity:1}
 
 .index-side{display:flex;flex-direction:column;gap:4px}
 .side-row{display:flex;align-items:center;gap:20px;padding:12px 0}
-.side-title{flex:none;font-size:17px;font-weight:500;line-height:1.4;color:var(--text-1)}
+.side-title{flex:none;display:flex;align-items:center;gap:6px;font-size:17px;font-weight:500;line-height:1.4;color:var(--text-1)}
 .side-rule{flex:1;height:1px;background:var(--border)}
 .side-meta{flex:none;width:230px;text-align:right;font-size:15px;line-height:1.5;color:var(--text-2)}
-a.side-row{text-decoration:none;transition:opacity .2s ease}
-a.side-row:hover{opacity:.65}
+a.side-row{text-decoration:none}
+.side-arrow{width:14px;height:14px;flex:none;color:var(--text-2);opacity:0;transition:opacity .18s ease}
+a.side-row:hover .side-arrow,a.side-row:focus-visible .side-arrow{opacity:1}
 
 /* Hover preview card --------------------------------------------------- */
 .hover-card{
