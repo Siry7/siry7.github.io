@@ -90,12 +90,16 @@ img{max-width:100%}
 /* Home ----------------------------------------------------------------- */
 .home{padding-top:64px;padding-bottom:64px}
 .hero-art{margin-top:88px;width:124px}
-.hero-art img{display:block;width:100%;height:auto}
-:root[data-theme="dark"] .hero-art img{filter:invert(1)}
+.hero-art img{width:100%;height:auto}
+.hero-art img.hero-art-dark{display:none}
+.hero-art img.hero-art-light{display:block}
+:root[data-theme="dark"] .hero-art img.hero-art-light{display:none}
+:root[data-theme="dark"] .hero-art img.hero-art-dark{display:block}
 @media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]) .hero-art img{filter:invert(1)}
+  :root:not([data-theme="light"]) .hero-art img.hero-art-light{display:none}
+  :root:not([data-theme="light"]) .hero-art img.hero-art-dark{display:block}
 }
-.home-h1{margin-top:46px;font-size:32px;font-weight:600;letter-spacing:-.64px;line-height:1.25;color:var(--text-1)}
+.home-h1{margin-top:89px;font-size:32px;font-weight:600;letter-spacing:-.64px;line-height:1.25;color:var(--text-1)}
 .home-intro{margin-top:24px;display:flex;flex-direction:column;gap:18px}
 .home-intro p{font-size:17px;line-height:1.7;color:var(--text-2)}
 .home .site-footer{margin-top:208px}
