@@ -1,0 +1,66 @@
+---
+layout: site
+page_class: cs
+title: OmniHR Proxy View
+description: Previewing employee access without breaking permission.
+---
+
+<a class="cs-back" href="{{ '/' | relative_url }}">← Back to home</a>
+<p class="cs-eyebrow">OmniHR • SaaS · Desktop</p>
+<h1 class="cs-title">Proxy View: previewing employee access without breaking permission</h1>
+
+<div class="cs-cover" style="aspect-ratio:640/437">
+  <img src="{{ '/assets/images/cases/proxy-cover.png' | relative_url }}" alt="OmniHR Proxy View" />
+</div>
+
+<dl class="cs-details">
+  <div><dt>Role</dt><dd>Product designer</dd></div>
+  <div><dt>Company</dt><dd>OmniHR</dd></div>
+  <div><dt>Platform</dt><dd>Desktop</dd></div>
+  <div><dt>Industry</dt><dd>SaaS · HRIS</dd></div>
+</dl>
+
+<article class="cs-article">
+<h2>Introduction</h2>
+<p>OmniHR relies heavily on permission scopes to control what each employee can see and do. This is important because HR admins are dealing with sensitive information like salary, personal data, and company documents.</p>
+<p>The problem started when HR admins needed to troubleshoot or understand what another employee could see. We wanted to give them a way to preview the employee's experience without simply giving them more permission.</p>
+<figure class="fig fig--box" style="--ar:640/452;--ar-m:342/255"><img src="{{ '/assets/images/cases/proxy-intro.png' | relative_url }}" alt="" /></figure>
+<h2>The problem</h2>
+<p>At first, it sounds simple: just let an admin see the system from another employee's point of view. But this creates a lot of questions.</p>
+<ul>
+  <li>What happens if the admin can suddenly see confidential information?</li>
+  <li>Who should be allowed to use this feature?</li>
+  <li>How do we prevent someone from abusing it?</li>
+  <li>And most importantly, how do we make sure this new feature doesn't break our existing WUCS and WUCD permission system?</li>
+</ul>
+<h2>What I worked on</h2>
+<p>I worked on a solution where proxy viewing became a separate operator role instead of another permission inside the existing access control.</p>
+<p class="kicker">Operator role</p>
+<h3>Proxy viewing as its own role</h3>
+<p>This means a higher-level admin can decide who is allowed to become an operator. The operator can preview another employee's access, but the system still makes the scope and responsibility clear.</p>
+<figure class="fig fig--box" style="--ar:640/480;--ar-m:342/260"><img src="{{ '/assets/images/cases/proxy-operator.png' | relative_url }}" alt="" /></figure>
+<p class="kicker">Audit trail</p>
+<h3>Every proxy session is recorded</h3>
+<p>We also introduced an audit trail for every proxy session. The system records:</p>
+<ul>
+  <li>Who started the session</li>
+  <li>Whose account was viewed</li>
+  <li>What actions happened during the session</li>
+</ul>
+<figure class="fig fig--box" style="--ar:640/420;--ar-m:342/230"><img src="{{ '/assets/images/cases/proxy-audit.png' | relative_url }}" alt="" /></figure>
+<h2>What I learned</h2>
+<p>Proxy View was a good example of how UX is not always about making something easier.</p>
+<p>Sometimes the hardest part is working between UX, security, regulation, and technical limitations.</p>
+<p>As a designer, I learned that when we are building something on top of an existing permission system, we need to understand how far we can push the system without breaking the things that already protect our users.</p>
+</article>
+
+<p class="cs-nextlabel">Next project</p>
+<a class="cs-next" href="{{ '/work/omnihr-receipt-ocr/' | relative_url }}">
+  <b>Receipt OCR: connecting AI with the expense experience</b>
+  <span>OmniHR</span>
+</a>
+
+<div class="cs-bottomlinks">
+  <a href="#top" data-top>Back to top</a>
+  <a href="{{ '/' | relative_url }}">Back to homepage</a>
+</div>

@@ -4,8 +4,12 @@
   projects:
     - title: Proxy view permission
       desc: Grant access for admin to execute proxy viewing for other employee
+      thumb: /assets/images/cases/proxy-cover.png
+      url: /work/omnihr-proxy-view/
     - title: OCR for expense reimbursement
       desc: Quality of life improvement for expense module (Powered by Claude)
+      thumb: /assets/images/cases/ocr-cover.png
+      url: /work/omnihr-receipt-ocr/
     - title: Omnihr AI chatbot Mino (Taskforce)
       desc: Support team for Omnihr first AI feature deployment
 
