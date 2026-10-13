@@ -42,7 +42,7 @@ description: Siry — Product (UI UX) designer currently studying Japanese in Ky
               <span class="project-desc">{{ p.desc }}</span>
             </a>
             {% else %}
-            <div class="project" data-thumb="{% if p.thumb %}{{ p.thumb | relative_url }}{% endif %}" data-title="{{ p.desc }}" data-meta="{{ c.name }} · {{ c.years }}">
+            <div class="project">
               <span class="project-title">{{ p.title }}</span>
               <span class="project-desc">{{ p.desc }}</span>
             </div>
@@ -130,7 +130,7 @@ description: Siry — Product (UI UX) designer currently studying Japanese in Ky
 
   function hide(){active=null;card.classList.remove('is-visible');}
 
-  document.querySelectorAll('.project, .side-row').forEach(function(el){
+  document.querySelectorAll('a.project, a.side-row').forEach(function(el){
     el.addEventListener('mouseenter',function(){show(el);});
     el.addEventListener('mouseleave',hide);
     el.addEventListener('focus',function(){show(el);});

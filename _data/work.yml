@@ -15,7 +15,6 @@
   projects:
     - title: Lumibot
       desc: Building automation bot for US market (In progress)
-      thumb: /assets/images/cases/home-lumibot.png
 
 - name: Ajaib
   years: "2021 – 2022"
@@ -29,8 +28,6 @@
       desc: Making auto trading easy for every trader
       thumb: /assets/images/cases/home-autotrade-flat.png
       url: /work/ajaib-auto-trade/
-    - title: Ajaib Design System
-      desc: Tokens and components for web and mobile
 
 - name: Cicil.co.id
   years: "2020 – 2021"
