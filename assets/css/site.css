@@ -195,6 +195,7 @@ a.side-row:hover .side-arrow,a.side-row:focus-visible .side-arrow{opacity:1}
 .cs-article ol{margin:0 0 16px;padding-left:22px;display:flex;flex-direction:column;gap:8px}
 .cs-article ol li::marker{color:var(--text-1);font-weight:600}
 .cs-article .lead{font-size:17px;font-weight:600;line-height:1.7;color:var(--text-1)}
+.cs-article .ai-highlight{font-size:17px;font-weight:600;line-height:1.7;color:#D97757;margin:0 0 32px}
 .cs-article .kicker{margin:0 0 16px;font-size:13px;font-weight:500;line-height:1.4;color:var(--text-2)}
 .cs-article figure+.kicker{margin-top:-12px}
 
@@ -362,7 +363,7 @@ a.side-row:hover .side-arrow,a.side-row:focus-visible .side-arrow{opacity:1}
   .cs-article{padding-top:32px}
   .cs-article h2{margin:40px 0 14px;font-size:20px}
   .cs-article h3{margin:32px 0 14px;font-size:17px}
-  .cs-article p,.cs-article li,.cs-article .lead{font-size:16px}
+  .cs-article p,.cs-article li,.cs-article .lead,.cs-article .ai-highlight{font-size:16px}
   .fig{aspect-ratio:var(--ar-m,var(--ar))}
   .fig--pad{padding:20px}
   .fig--show>img,.fig--show>.shot-crop{border-radius:calc(var(--r, 8px) * .55)}
