@@ -89,7 +89,7 @@ img{max-width:100%}
 
 /* Home ----------------------------------------------------------------- */
 .home{padding-top:64px;padding-bottom:64px}
-.hero-art{margin-top:88px;width:124px}
+.hero-art{margin-top:48px;width:124px}
 .hero-art img{width:100%;height:auto}
 .hero-art img.hero-art-dark{display:none}
 .hero-art img.hero-art-light{display:block}
@@ -99,13 +99,17 @@ img{max-width:100%}
   :root:not([data-theme="light"]) .hero-art img.hero-art-light{display:none}
   :root:not([data-theme="light"]) .hero-art img.hero-art-dark{display:block}
 }
-.home-h1{margin-top:89px;font-size:32px;font-weight:600;letter-spacing:-.64px;line-height:1.25;color:var(--text-1)}
+.home-h1{margin-top:32px;font-size:32px;font-weight:600;letter-spacing:-.64px;line-height:1.25;color:var(--text-1)}
 .home-intro{margin-top:24px;display:flex;flex-direction:column;gap:18px}
 .home-intro p{font-size:17px;line-height:1.7;color:var(--text-2)}
-.home .site-footer{margin-top:208px}
+.company-link{display:inline-flex;align-items:center;gap:4px;text-decoration:none;color:var(--text-1);font-weight:600;vertical-align:middle}
+.company-link img{width:20px;height:20px;border-radius:5px;object-fit:cover;display:block}
+.company-link span{border-bottom:1.5px solid transparent}
+.company-link:hover span,.company-link:focus-visible span{border-bottom-color:var(--text-1)}
+.home .site-footer{margin-top:263px}
 
 /* Index list ----------------------------------------------------------- */
-.index{margin-top:48px;display:flex;flex-direction:column;gap:56px}
+.index{margin-top:18px;display:flex;flex-direction:column;gap:56px}
 .index-label{
   display:block;padding-bottom:8px;
   font-family:var(--mono);font-size:13px;font-weight:400;letter-spacing:.4px;color:var(--text-2);
@@ -338,11 +342,13 @@ a.side-row:hover .side-arrow,a.side-row:focus-visible .side-arrow{opacity:1}
   .home-h1{margin-top:32px;font-size:28px}
   .home-intro{margin-top:20px}
   .home-intro p{font-size:16px}
+  .company-link img{width:18px;height:18px}
   .index{margin-top:40px;gap:40px}
   .home .site-footer{margin-top:96px}
 
   .projects-inner{padding-left:28px}
   .company-years{font-size:14px}
+  .project-desc{font-size:12px}
 
   .side-row{flex-wrap:wrap;gap:4px}
   .side-rule{display:none}
