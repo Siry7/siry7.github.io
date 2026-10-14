@@ -35,11 +35,9 @@ description: Previewing employee access without breaking permission.
 </ul>
 <h2>What I worked on</h2>
 <p>I worked on a solution where proxy viewing became a separate operator role instead of another permission inside the existing access control.</p>
-<p class="kicker">Operator role</p>
 <h3>Proxy viewing as its own role</h3>
 <p>This means a higher-level admin can decide who is allowed to become an operator. The operator can preview another employee's access, but the system still makes the scope and responsibility clear.</p>
 <figure class="fig fig--box" style="--ar:640/480;--ar-m:342/260"><img src="{{ '/assets/images/cases/proxy-operator.png' | relative_url }}" alt="" /></figure>
-<p class="kicker">Audit trail</p>
 <h3>Every proxy session is recorded</h3>
 <p>We also introduced an audit trail for every proxy session. The system records:</p>
 <ul>
