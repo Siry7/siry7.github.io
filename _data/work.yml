@@ -10,15 +10,15 @@
       desc: Quality of life improvement for expense module (Powered by Claude)
       thumb: /assets/images/cases/ocr-cover.png
       url: /work/omnihr-receipt-ocr/
-    - title: Omnihr AI chatbot Mino (Taskforce)
-      desc: Support team for Omnihr first AI feature deployment <b>(In progress)</b>
+    - title: Omnihr AI chatbot Mino (Taskforce) <b>(In progress)</b>
+      desc: Support team for Omnihr first AI feature deployment
 
 - name: Lumina
   years: "2023 – 2024"
   logo: /assets/images/logo-lumina.png
   projects:
-    - title: Lumibot
-      desc: Building automation bot for US market <b>(In progress)</b>
+    - title: Lumibot <b>(In progress)</b>
+      desc: Building automation bot for US market
 
 - name: Ajaib
   years: "2021 – 2022"

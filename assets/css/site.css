@@ -132,8 +132,8 @@ img{max-width:100%}
 .projects-inner{display:flex;flex-direction:column;gap:16px;padding:6px 0 18px 36px}
 
 .project{display:block;text-decoration:none;color:inherit}
-.project-title{display:flex;align-items:center;gap:6px;font-size:16px;font-weight:500;line-height:1.4;color:var(--text-1)}
-.project-arrow{width:14px;height:14px;flex:none;color:var(--text-2);opacity:0;transition:opacity .18s ease}
+.project-title{display:block;font-size:16px;font-weight:500;line-height:1.4;color:var(--text-1)}
+.project-arrow{display:inline-block;width:14px;height:14px;margin-left:6px;vertical-align:-2px;color:var(--text-2);opacity:0;transition:opacity .18s ease}
 a.project:hover .project-arrow,a.project:focus-visible .project-arrow{opacity:1}
 .project-desc{margin-top:2px;font-size:15px;line-height:1.5;color:var(--text-2)}
 
