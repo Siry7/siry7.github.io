@@ -11,14 +11,14 @@
       thumb: /assets/images/cases/ocr-cover.png
       url: /work/omnihr-receipt-ocr/
     - title: Omnihr AI chatbot Mino (Taskforce)
-      desc: Support team for Omnihr first AI feature deployment
+      desc: Support team for Omnihr first AI feature deployment <b>(In progress)</b>
 
 - name: Lumina
   years: "2023 – 2024"
   logo: /assets/images/logo-lumina.png
   projects:
     - title: Lumibot
-      desc: Building automation bot for US market (In progress)
+      desc: Building automation bot for US market <b>(In progress)</b>
 
 - name: Ajaib
   years: "2021 – 2022"
