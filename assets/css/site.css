@@ -102,14 +102,10 @@ img{max-width:100%}
 .home-h1{margin-top:32px;font-size:32px;font-weight:600;letter-spacing:-.64px;line-height:1.25;color:var(--text-1)}
 .home-intro{margin-top:24px;display:flex;flex-direction:column;gap:18px}
 .home-intro p{font-size:17px;line-height:1.7;color:var(--text-2)}
-.company-link{display:inline-flex;align-items:center;gap:4px;text-decoration:none;color:var(--text-1);font-weight:600;vertical-align:middle}
-.company-link img{width:20px;height:20px;border-radius:5px;object-fit:cover;display:block}
-.company-link span{border-bottom:1.5px solid transparent}
-.company-link:hover span,.company-link:focus-visible span{border-bottom-color:var(--text-1)}
 .home .site-footer{margin-top:263px}
 
 /* Index list ----------------------------------------------------------- */
-.index{margin-top:18px;display:flex;flex-direction:column;gap:56px}
+.index{margin-top:56px;display:flex;flex-direction:column;gap:56px}
 .index-label{
   display:block;padding-bottom:8px;
   font-family:var(--mono);font-size:13px;font-weight:400;letter-spacing:.4px;color:var(--text-2);
