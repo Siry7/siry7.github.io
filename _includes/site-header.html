@@ -1,12 +1,29 @@
+{% assign cur_lang = page.lang | default: "en" %}
+{% if cur_lang == "ja" %}
+  {% assign en_url = page.translation_url | default: "/" %}
+  {% assign ja_url = page.url %}
+  {% assign home_url = "/ja/" %}
+{% else %}
+  {% assign en_url = page.url %}
+  {% assign ja_url = page.translation_url | default: "/ja/" %}
+  {% assign home_url = "/" %}
+{% endif %}
 <header class="site-header">
-  <a class="brand" href="{{ '/' | relative_url }}"><b>Siry</b><i>シリー</i></a>
-  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light or dark theme">
-    <svg class="icon-moon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-      <path d="M13.68687 9.16667c-1.17448 3.02534-4.25469 4.86555-7.47531 4.46597-3.22062-0.39957-5.75775-2.9367-6.15733-6.15732-0.39957-3.22062 1.44064-6.30083 4.46598-7.47532-2.53131 2.53131-2.53131 6.63536 0 9.16667 2.5313 2.53131 6.63536 2.53131 9.16666 0" transform="translate(3.396459 2.916667)" stroke="currentColor" stroke-width="1.458" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
-    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <circle cx="12" cy="12" r="4" />
-      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
-    </svg>
-  </button>
+  <a class="brand" href="{{ home_url | relative_url }}"><b>Siry</b><i>シリー</i></a>
+  <div class="header-actions">
+    <div class="lang-switch" role="group" aria-label="Language">
+      <a class="lang-link{% if cur_lang == 'en' %} is-active{% endif %}" href="{{ en_url | relative_url }}"{% if cur_lang == 'en' %} aria-current="page"{% endif %}>EN</a>
+      <span class="lang-divider" aria-hidden="true">/</span>
+      <a class="lang-link{% if cur_lang == 'ja' %} is-active{% endif %}" href="{{ ja_url | relative_url }}"{% if cur_lang == 'ja' %} aria-current="page"{% endif %}>日本語</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light or dark theme">
+      <svg class="icon-moon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M13.68687 9.16667c-1.17448 3.02534-4.25469 4.86555-7.47531 4.46597-3.22062-0.39957-5.75775-2.9367-6.15733-6.15732-0.39957-3.22062 1.44064-6.30083 4.46598-7.47532-2.53131 2.53131-2.53131 6.63536 0 9.16667 2.5313 2.53131 6.63536 2.53131 9.16666 0" transform="translate(3.396459 2.916667)" stroke="currentColor" stroke-width="1.458" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+      </svg>
+    </button>
+  </div>
 </header>

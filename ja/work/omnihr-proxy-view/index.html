@@ -1,0 +1,69 @@
+---
+lang: ja
+translation_key: omnihr-proxy-view
+translation_url: /work/omnihr-proxy-view/
+layout: site
+page_class: cs
+title: OmniHR プロキシビュー
+description: 権限システムを壊さずに、従業員の画面を確認できるようにした代理閲覧機能。
+image: /assets/images/cases/proxy-cover.png
+noindex: true
+---
+
+<a class="cs-back" href="{{ '/ja/' | relative_url }}">← ホームへ戻る</a>
+<p class="cs-eyebrow">OmniHR • SaaS・デスクトップ</p>
+<h1 class="cs-title">プロキシビュー：権限を維持したまま、従業員の画面を確認できる機能</h1>
+
+<div class="cs-cover" style="aspect-ratio:640/437">
+  <img src="{{ '/assets/images/cases/proxy-cover.png' | relative_url }}" alt="OmniHR プロキシビュー" />
+</div>
+
+<dl class="cs-details">
+  <div><dt>役割</dt><dd>プロダクトデザイナー</dd></div>
+  <div><dt>会社</dt><dd>OmniHR</dd></div>
+  <div><dt>プラットフォーム</dt><dd>デスクトップ</dd></div>
+  <div><dt>業界</dt><dd>SaaS・HRIS</dd></div>
+</dl>
+
+<article class="cs-article">
+<h2>はじめに</h2>
+<p>OmniHRでは、各従業員が何を見てどこまで操作できるかを、権限スコープによって細かく制御しています。これは、人事担当者が給与や個人情報、社内文書といった機密性の高い情報を扱っているため、非常に重要な仕組みです。</p>
+<p>問題が顕在化したのは、人事担当者が「この従業員には何が見えているのか」を確認したり、トラブルシューティングしたりする必要が出てきたときでした。そこで、権限をさらに付与するのではなく、従業員の画面をそのまま確認できる手段を提供したいと考えました。</p>
+<figure class="fig fig--box" style="--ar:640/452;--ar-m:342/255"><img src="{{ '/assets/images/cases/proxy-intro.png' | relative_url }}" alt="" /></figure>
+<h2>課題</h2>
+<p>一見シンプルに聞こえます。管理者が別の従業員の視点でシステムを見られるようにすればいいだけです。しかし、実際にはいくつもの疑問が生まれました。</p>
+<ul>
+  <li>管理者が急に機密情報を見られるようになったらどうするか?</li>
+  <li>この機能を使えるのは誰であるべきか?</li>
+  <li>悪用を防ぐにはどうすればよいか?</li>
+  <li>そして最も重要な点として、この新機能が既存のWUCSおよびWUCD権限システムを壊さないようにするにはどうすればよいか?</li>
+</ul>
+<h2>私が取り組んだこと</h2>
+<p>私が設計したのは、プロキシビューを既存のアクセス制御の中の一権限として追加するのではなく、独立した「オペレーターロール」として切り出す仕組みです。</p>
+<h3>プロキシビューを独立したロールにする</h3>
+<p>これにより、より上位の管理者が「誰をオペレーターにするか」を決められるようになります。オペレーターは他の従業員の権限を代理で確認できますが、その範囲と責任の所在はシステム上で明確に区別されます。</p>
+<figure class="fig fig--box" style="--ar:640/480;--ar-m:342/260"><img src="{{ '/assets/images/cases/proxy-operator.png' | relative_url }}" alt="" /></figure>
+<h3>すべてのプロキシセッションを記録する</h3>
+<p>また、すべてのプロキシセッションに対して監査ログを導入しました。システムが記録するのは次の内容です。</p>
+<ul>
+  <li>誰がセッションを開始したか</li>
+  <li>誰のアカウントが閲覧されたか</li>
+  <li>セッション中にどのような操作が行われたか</li>
+</ul>
+<figure class="fig fig--box" style="--ar:640/420;--ar-m:342/230"><img src="{{ '/assets/images/cases/proxy-audit.png' | relative_url }}" alt="" /></figure>
+<h2>学んだこと</h2>
+<p>プロキシビューは、UXが必ずしも「物事を簡単にすること」だけではないと実感させてくれたプロジェクトでした。</p>
+<p>時には、UXとセキュリティ、規制、技術的な制約の間でバランスを取ることこそが一番難しい部分になります。</p>
+<p>デザイナーとして学んだのは、既存の権限システムの上に新しい機能を構築する際には、すでにユーザーを守っている仕組みを壊さない範囲がどこまでかを理解しておく必要がある、ということです。</p>
+</article>
+
+<p class="cs-nextlabel">次のプロジェクト</p>
+<a class="cs-next" href="{{ '/ja/work/omnihr-receipt-ocr/' | relative_url }}">
+  <b>経費精算を、もう手作業にしない</b>
+  <span>OmniHR</span>
+</a>
+
+<div class="cs-bottomlinks">
+  <a href="#top" data-top>先頭へ戻る</a>
+  <a href="{{ '/ja/' | relative_url }}">ホームへ戻る</a>
+</div>

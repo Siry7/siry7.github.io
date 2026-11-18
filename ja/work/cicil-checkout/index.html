@@ -1,0 +1,174 @@
+---
+lang: ja
+translation_key: cicil-checkout
+translation_url: /work/cicil-checkout/
+layout: site
+page_class: cs
+title: Cicil 価格試算・決済
+description: 分割払いの価格試算と決済体験を刷新。
+image: /assets/images/cases/cc-cover.png
+noindex: true
+---
+
+<a class="cs-back" href="{{ '/ja/' | relative_url }}">← ホームへ戻る</a>
+<p class="cs-eyebrow">Cicil.co.id • 2021 · リニューアル • モバイル</p>
+<h1 class="cs-title">Cicilの新しい価格試算・決済体験</h1>
+
+<div class="cs-cover" style="aspect-ratio:640/448">
+  <img src="{{ '/assets/images/cases/cc-cover.png' | relative_url }}" alt="Cicil 決済画面" />
+</div>
+
+<dl class="cs-details">
+  <div><dt>役割</dt><dd>プロダクトデザイナー</dd></div>
+  <div><dt>期間</dt><dd>2ヶ月</dd></div>
+  <div><dt>プラットフォーム</dt><dd>Android</dd></div>
+  <div><dt>チーム</dt><dd>プロダクトリサーチャー、プロダクトマネージャー</dd></div>
+</dl>
+
+<article class="cs-article">
+<h2>背景</h2>
+<p>CICILは、インドネシア最大級の教育ローン会社の一つです。私たちの目標は、学生が学業に打ち込むために必要なものをすべて揃えられるよう支援することです。米国では学生ローンが一般的ですが、インドネシアの人々にとってはまだ新しい概念です。</p>
+<figure class="fig fig--box" style="--ar:640/360"><img src="{{ '/assets/images/cases/cc-background.png' | relative_url }}" alt="" /></figure>
+<h2>Cicilの仕組み</h2>
+<figure class="fig fig--box" style="--ar:640/378"><img src="{{ '/assets/images/cases/cc-how.png' | relative_url }}" alt="" /></figure>
+<h2>Chapter 0. 概要</h2>
+<h3>課題</h3>
+<p>既存の決済ページは、分かりにくいローン用語と煩雑なデザインが大きな課題でした。学生が別のシミュレーションを試したいときにリンクを切り替えられないことも、非常に高い離脱率の一因となっていました。分割払いと利用限度額に関する情報も分かりにくく、価格試算・決済体験全体を損なっていました。</p>
+<h3>目的</h3>
+<ul>
+  <li>新しいデザインシステムで決済ページのビジュアルを改善し、UXとコンテンツ構造の課題をすべて解消する。</li>
+  <li>既存ユーザーと新規ユーザーの両方にとって、情報構造を分かりやすくする。</li>
+  <li>離脱率と、ローン構造が分かりにくいというユーザーからの不満を減らす。</li>
+</ul>
+<h3>課題と制約</h3>
+<p>これは私にとって初めての大規模なリデザインプロジェクトであり、CICILのプロダクトの歩みの中でも重要な位置づけのプロジェクトでした。プロダクトデザイナーとしてまだ5ヶ月目というタイミングでこのプロジェクトを担当することになり、しかもすべてのリサーチをCOVID-19流行初期に実施する必要がありました。インタビューやユーザビリティテストをすべてオンラインツールで行わなければならなかったため、リサーチプロセスには苦労しました。</p>
+<figure class="fig fig--row fig--stack" style="--ar:640/314;--ar-m:342/712">
+  <span class="is-framed"><img src="{{ '/assets/images/cases/cc-old-1.png' | relative_url }}" alt="" /></span>
+  <span class="is-framed"><img src="{{ '/assets/images/cases/cc-old-2.png' | relative_url }}" alt="" /></span>
+</figure>
+<p class="kicker">数値計算の構造が分かりにくかった、旧決済ページ</p>
+<h2>Chapter 1. 理解する</h2>
+<h3>リサーチ、インタビュー、データ</h3>
+<p>このプロジェクトは、リサーチのリソースが限られた状態からスタートしました。当時のCICILにはリサーチャーが1人しかおらず、リサーチ手法も体系化されていなかったためです。そのため、深いユーザーリサーチを行わないままプロジェクトを始めることになりました。PMのリサーチ結果、ステークホルダーへのインタビュー、デザイナー側が期待する目標など、複数の情報源から手がかりを集めました。そして、データという形ですぐに結果を得るため、ユーザー向けのコンセプトテストを開始しました。</p>
+<div class="defblock"><b>コンテキストの把握</b><p>プロダクトを深く理解するため、プロダクトマネージャーとの対話を始めました。この対話を通じて、マージンの計算方法について多くの情報を得ることができました。</p></div>
+<div class="defblock"><b>Mazeを使ったコンセプトテスト</b><p>COVID-19流行初期だったため、オンラインでのユーザビリティテストは新しい試みでした。Mazeを使ってコンセプトテストを行い、有意義なデータを得ることができました。</p></div>
+<div class="defblock"><b>テストからの再イテレーション</b><p>コンセプトテストを経て、デザインの方向性がより明確になりました。デザインの目的を理解することができました。</p></div>
+<p class="kicker">リサーチ:Mazeによるユーザビリティテスト</p>
+<h3>最初のイテレーションのコンセプトテストで得られたこと:</h3>
+<p>このコンセプトテストは、プロダクトリサーチャーと共同で実施しました。パンデミックという制約のある状況だったため、主なツールとしてMazeを使用しました。また、一部のユーザーに対しては、オンラインのユーザビリティテストと簡単なインタビューでフォローアップも行いました。このリサーチでは、デザインプロセスを進めるのに十分なインサイトが得られ、かなり満足のいく結果になりました。</p>
+
+<div class="metrics">
+  <div><b>85,3%</b><span>成功率</span></div>
+  <div><b>14,7%</b><span>離脱率</span></div>
+  <div><b>10,5%</b><span>誤クリック率</span></div>
+  <div><b>34.7秒</b><span>成功までの平均所要時間</span></div>
+</div>
+
+<figure class="fig fig--box fig--show" style="--ar:640/393">
+  <img src="{{ '/assets/images/cases/cc-maze-1.png' | relative_url }}" alt="" style="--h:83.7%" />
+  <img src="{{ '/assets/images/cases/cc-maze-2.jpg' | relative_url }}" alt="" style="--h:83.7%" />
+  <img src="{{ '/assets/images/cases/cc-maze-3.jpg' | relative_url }}" alt="" style="--h:83.7%" />
+  <img src="{{ '/assets/images/cases/cc-maze-4.jpg' | relative_url }}" alt="" style="--h:83.7%" />
+  <img src="{{ '/assets/images/cases/cc-maze-5.jpg' | relative_url }}" alt="" style="--h:83.7%" />
+</figure>
+<h3>ここまでで分かったこと</h3>
+<ul>
+  <li>一部のローン・金融用語が分かりにくく、ユーザーは分割払いの金額さえ分かればよいと考えていた。</li>
+  <li>ユーザーは複数の販売元の異なるリンクを試したがる傾向があり、これが高い離脱率の一因となっていた。</li>
+  <li>コンセプトテストの中で、離脱率は70%から20%まで改善した。</li>
+  <li>ローンの利用限度額という概念を理解するのが難しかった。</li>
+</ul>
+<p class="kicker">リサーチ:インタビュー</p>
+<h3>2回目のイテレーションのオンラインユーザビリティテスト</h3>
+<p>このときには、デザインはほぼ最終段階に入っていました。構造面の細部について多くのフィードバックを得た後、もう一度テストを実施しました。情報設計を改善し、ユーザーにとって重要な情報を見せることを目指しました。次のイテレーションでの目標は以下のとおりです。</p>
+<ol>
+  <li>情報の優先順位を整理し、気が散る要素を最小限にする。</li>
+  <li>リンクの切り替えをより分かりやすくする。</li>
+  <li>分割払いの内訳と利用限度額の情報を簡潔に提示する。</li>
+</ol>
+<h3>課題</h3>
+<ul>
+  <li>学生にとって馴染みのない用語。</li>
+  <li>手数料の内訳が分かりにくい。</li>
+  <li>他の価格を試算するためにリンクを切り替えられない。</li>
+  <li>利用限度額の情報が分かりにくい。</li>
+  <li>情報が煩雑で、重要な情報が埋もれてしまっている。</li>
+</ul>
+<figure class="fig fig--box" style="--ar:640/448"><img src="{{ '/assets/images/cases/cc-problem.png' | relative_url }}" alt="" /></figure>
+<h2>Chapter 2. 設計</h2>
+<h3>デザインの成果物</h3>
+<p>リサーチとテストの結果をもとに、いくつかのデザイン変更を行いました。</p>
+<figure class="fig fig--box" style="--ar:640/448"><img src="{{ '/assets/images/cases/cc-deliverables-flat.png' | relative_url }}" alt="" /></figure>
+<p class="kicker">デザインの成果物</p>
+<h3>見た目を一新したデザイン</h3>
+<p>UIをシンプルにし、ユーザーにとって分かりやすい体験にしました。</p>
+<h3>すべてのセクションをユーザー中心の視点で設計</h3>
+<p>ユーザーが価格を試算するために複数のリンクを試したがる傾向があると分かり、これが高い離脱率の原因の一つだと理解しました。商品リンクを直接貼り付けて情報を取得できるショートカット入力フォームを追加したことが、体験をシームレスにし、離脱を減らす鍵になりました。</p>
+<figure class="fig fig--box" style="--ar:640/561"><img src="{{ '/assets/images/cases/cc-section.png' | relative_url }}" alt="" /></figure>
+<p class="kicker">成果物 1</p>
+<h3>ユーザーは「閲覧」ではなく、特定の商品を買う明確な目的を持ってアプリに来ている</h3>
+<p>私たちはマーケットプレイスではなく、サードパーティの決済アプリです。ユーザーは、すでに明確な目的意識を持ってアプリにやって来ます。マーケットプレイスで商品を見終え、何を買いたいかはすでに決まっている状態です。そこで、商品カードが画面の半分を占めるようなレイアウトにするのではなく、重要度の低い情報を思い切って削り、よりコンパクトにすることにしました。</p>
+<figure class="fig fig--row" style="--ar:640/314">
+  <span><img src="{{ '/assets/images/cases/cc-d1-1.png' | relative_url }}" alt="" /></span>
+  <span><img src="{{ '/assets/images/cases/cc-d1-2.png' | relative_url }}" alt="" /></span>
+</figure>
+<p class="kicker">成果物 2</p>
+<h3>いつでもリンクを切り替えられる</h3>
+<p>ユーザーは、異なる価格を試算するためのリンクをシームレスに切り替えられるようになりました。</p>
+<figure class="fig fig--row fig--stack" style="--ar:640/314;--ar-m:342/616">
+  <span><img src="{{ '/assets/images/cases/cc-d2-1.png' | relative_url }}" alt="" /></span>
+  <span><img src="{{ '/assets/images/cases/cc-d2-2.png' | relative_url }}" alt="" /></span>
+</figure>
+<p class="kicker">成果物 3</p>
+<h3>ローン内訳をすっきり整理</h3>
+<p>複数の項目を「費用合計」としてまとめ、クリックすると詳細を確認できるようにしました。</p>
+<p class="kicker">成果物 4</p>
+<h3>新しく改良された利用限度額カード</h3>
+<p>分かりにくい数字の代わりにビジュアルなサインを使い、利用可能な限度額をひと目で分かるようにしました。</p>
+<figure class="fig fig--box fig--show" style="--ar:640/600;--ar-m:342/321">
+  <span class="shot-crop" style="--h:89.3%;--r:34px;--car:253/536;--sx:1.0667;--sy:1.0377"><img src="{{ '/assets/images/cases/cc-limit.gif' | relative_url }}" alt="" /></span>
+</figure>
+<figure class="fig fig--box fig--show" style="--ar:640/360">
+  <img src="{{ '/assets/images/cases/cc-limit-old-card.png' | relative_url }}" alt="" style="--h:82.2%;--r:0px" />
+</figure>
+<h3>以前の状態</h3>
+<p>実際に計算してみても意味が通らない数字が並んでいました。掛け算のように見えますが、実際はそうではありません。数字があちこちに散らばっている一方で、学生が本当に知りたいのは「今の限度額でこの商品をまだ買えるかどうか」、それだけです。</p>
+<h3>今はひと目で分かりやすく</h3>
+<p>緑色で、現在の利用可能枠からどれだけの限度額を使うことになるかを示しています。チェックリスト形式のインジケーターを加えることで、より分かりやすくしました。</p>
+<p>学生の限度額が不足している場合は、決済を続けることができません。頭金を増やすか、より安い商品を選ぶ必要があります。</p>
+<figure class="fig fig--row fig--stack" style="--ar:640/314;--ar-m:342/404">
+  <span><img src="{{ '/assets/images/cases/cc-limit-new-1.png' | relative_url }}" alt="" /></span>
+  <span><img src="{{ '/assets/images/cases/cc-limit-new-2.png' | relative_url }}" alt="" /></span>
+</figure>
+<p class="kicker">利用可能な状態と、限度額超過の状態</p>
+<p class="kicker">番外編の試み</p>
+<h3>ローディングアニメーションでもっと楽しく</h3>
+<p>地方に住む学生の中には、他のマーケットプレイスから商品情報を取得する際に、読み込みに時間がかかるケースもあります。その待ち時間に寄り添う気持ちで、読み込みが進んでいることが伝わるローディングアニメーションを追加しました。</p>
+<figure class="fig fig--box fig--show" style="--ar:640/412;--ar-m:342/511">
+  <span class="shot-stack" style="--h:84.5%;--r:8px">
+    <img src="{{ '/assets/images/cases/cc-loading.png' | relative_url }}" alt="" />
+    <span class="shot-anim" aria-hidden="true"><img src="{{ '/assets/images/cases/cc-loading-gif.gif' | relative_url }}" alt="" /></span>
+  </span>
+</figure>
+<h2>Chapter 3. 学び</h2>
+<h3>学んだこと</h3>
+<p>このプロジェクトは、CICILでこれまでで最大の単独プロジェクトであり、PMやエンジニア、社内のステークホルダー、そしてユーザーとのコミュニケーションについて多くを学ぶ機会になりました。CICILに入社してわずか4〜5ヶ月(プロダクトデザイナーとして初めてのフルタイムの仕事)というタイミングで始まったこのプロジェクトを通じて、質の良いビジュアルを作ること、自分のデザインを説明すること、指摘を受け止めること、そしてユーザーのニーズを理解することを学びました。</p>
+
+<div class="metrics">
+  <div><b>60.5%</b><span>離脱率の低下</span></div>
+  <div><b>24.7%</b><span>ユーザー満足度の向上</span></div>
+  <div><b>32.8%</b><span>コンバージョンまでの所要時間が32.8%短縮</span></div>
+  <div><b>60,5%</b><span>より分かりやすく使いやすいと感じた</span></div>
+</div>
+</article>
+
+<p class="cs-nextlabel">次のプロジェクト</p>
+<a class="cs-next" href="{{ '/ja/work/cicil-membership/' | relative_url }}">
+  <b>会員登録オンボーディングのゲーミフィケーション</b>
+  <span>cicil.co.id</span>
+</a>
+
+<div class="cs-bottomlinks">
+  <a href="#top" data-top>先頭へ戻る</a>
+  <a href="{{ '/ja/' | relative_url }}">ホームへ戻る</a>
+</div>

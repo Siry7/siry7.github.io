@@ -1,0 +1,47 @@
+- name: OmniHR
+  years: "2024 – 2026"
+  logo: /assets/images/logos/logo-omnihr.png
+  projects:
+    - title: プロキシビュー機能
+      desc: 他の従業員の画面を管理者が代理閲覧できる権限機能
+      thumb: /assets/images/cases/proxy-cover.png
+      url: /ja/work/omnihr-proxy-view/
+    - title: 経費精算を、もう手作業にしない
+      desc: 経費精算モジュールの使い心地を改善(Powered by Claude)
+      thumb: /assets/images/cases/ocr-cover.png
+      url: /ja/work/omnihr-receipt-ocr/
+    - title: OmniHRのAIチャットボット「Mino」(タスクフォース) <b>(進行中)</b>
+      desc: OmniHR初のAI機能リリースを支援するサポートチーム
+
+- name: Lumina
+  years: "2023 – 2024"
+  logo: /assets/images/logo-lumina.png
+  projects:
+    - title: Lumibot <b>(進行中)</b>
+      desc: 米国市場向けの自動化ボットを開発中
+
+- name: Ajaib
+  years: "2021 – 2022"
+  logo: /assets/images/cases/logo-ajaib.png
+  projects:
+    - title: Ajaib デイトレード機能
+      desc: インドネシア市場向けにデイトレード体験を最適化
+      thumb: /assets/images/cases/home-daytrading.png
+      url: /ja/work/ajaib/
+    - title: Ajaib オートトレード機能
+      desc: すべてのトレーダーが使いやすいオートトレードを実現
+      thumb: /assets/images/cases/home-autotrade-flat.png
+      url: /ja/work/ajaib-auto-trade/
+
+- name: Cicil.co.id
+  years: "2020 – 2021"
+  logo: /assets/images/logos/logo-cicil.png
+  projects:
+    - title: 分割払いの試算・決済フロー
+      desc: 学生がより分かりやすく分割払いを試算できる体験
+      thumb: /assets/images/cases/home-cicil-checkout.png
+      url: /ja/work/cicil-checkout/
+    - title: 会員登録オンボーディング
+      desc: 楽しいクイズ形式で最適な会員プランを選べる体験
+      thumb: /assets/images/cases/og-objectives.png
+      url: /ja/work/cicil-membership/

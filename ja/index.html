@@ -1,0 +1,149 @@
+---
+lang: ja
+translation_key: home
+translation_url: /
+layout: site
+title: ホーム
+page_class: home
+description: Siry — UI/UXプロダクトデザイナー。京都で日本語を学んでいます。
+image: /assets/images/avatar-light.png
+noindex: true
+---
+
+<div class="hero-art">
+  <img class="hero-art-light" src="{{ '/assets/images/avatar-light.png' | relative_url }}" alt="" />
+  <img class="hero-art-dark" src="{{ '/assets/images/avatar-dark.png' | relative_url }}" alt="" />
+</div>
+
+<h1 class="home-h1">こんにちは、シリーです。</h1>
+
+<div class="home-intro">
+  <p>UI/UXプロダクトデザイナー。現在は京都で日本語を学んでいます</p>
+  <p>SaaSやFintechプロダクトを中心に、6年間プロダクトデザイナーとして携わってきました。複雑なシステムやデータ、業務フローを、誰にとっても分かりやすい体験に変えることを得意としています。</p>
+  <p>技術的な複雑さと、使う人の理解との間をつなぐことが私の役割です。高度な機能や計算処理も、専門知識の有無に関わらず誰もが迷わず使えるシンプルな体験へと落とし込みます。</p>
+  <p>最近は、AIをどう活用すれば制作スピードを上げながら「考える」部分により多くの時間を使えるかを模索しています。それでも、人間中心という軸は変わりません。ARやIoT、ゲームのようなインタラクティブなプロダクトにも関心があります。</p>
+</div>
+
+<section class="index">
+  <div class="index-section">
+    <span class="index-label">WORK</span>
+
+    {% assign companies = site.data.work_ja %}
+    {% for c in companies %}
+    <div class="company" data-company>
+      <button class="company-row" type="button" aria-expanded="false">
+        <img class="company-logo" src="{{ c.logo | relative_url }}" alt="" />
+        <span class="company-name">{{ c.name }}</span>
+        <span class="company-rule"></span>
+        <span class="company-years">{{ c.years }}</span>
+        <svg class="company-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="projects-wrap">
+        <div class="projects">
+          <div class="projects-inner">
+            {% for p in c.projects %}
+            {% if p.url %}
+            <a class="project" href="{{ p.url | relative_url }}" data-thumb="{% if p.thumb %}{{ p.thumb | relative_url }}{% endif %}" data-title="{{ p.desc }}" data-meta="{{ c.name }} · {{ c.years }}">
+              <span class="project-title">{{ p.title }}<svg class="project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+              <span class="project-desc">{{ p.desc }}</span>
+            </a>
+            {% else %}
+            <div class="project">
+              <span class="project-title">{{ p.title }}</span>
+              <span class="project-desc">{{ p.desc }}</span>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="index-section index-side">
+    <span class="index-label">Freelance</span>
+    {% for s in site.data.freelance_ja %}
+    {% if s.url %}
+    <a class="side-row" href="{{ s.url }}" target="_blank" rel="noopener" data-thumb="{% if s.thumb %}{{ s.thumb | relative_url }}{% endif %}" data-title="{{ s.title }}" data-meta="Freelance">
+      <span class="side-title">{{ s.title }}<svg class="side-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+      <span class="side-rule"></span>
+      <span class="side-meta">{{ s.meta }}</span>
+    </a>
+    {% else %}
+    <div class="side-row">
+      <span class="side-title">{{ s.title }}</span>
+      <span class="side-rule"></span>
+      <span class="side-meta">{{ s.meta }}</span>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<div class="hover-card" id="hoverCard" aria-hidden="true">
+  <div>
+    <div class="hover-card-title"></div>
+    <div class="hover-card-meta"></div>
+  </div>
+  <div class="hover-card-cover">
+    <img alt="" hidden />
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></svg>
+  </div>
+</div>
+
+<script>
+(function(){
+  /* Accordion ------------------------------------------------------- */
+  document.querySelectorAll('[data-company]').forEach(function(company){
+    var btn=company.querySelector('.company-row');
+    btn.addEventListener('click',function(){
+      var open=company.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+      if(!open) hide();
+    });
+  });
+
+  /* Hover preview --------------------------------------------------- */
+  var card=document.getElementById('hoverCard');
+  if(!card) return;
+  var titleEl=card.querySelector('.hover-card-title');
+  var metaEl=card.querySelector('.hover-card-meta');
+  var imgEl=card.querySelector('.hover-card-cover img');
+  var iconEl=card.querySelector('.hover-card-cover svg');
+  var active=null;
+
+  function canShow(){return window.matchMedia('(min-width: 1280px)').matches;}
+
+  function place(el){
+    var r=el.getBoundingClientRect();
+    var h=card.offsetHeight;
+    var top=Math.min(Math.max(r.top-8,16),window.innerHeight-h-16);
+    card.style.top=top+'px';
+  }
+
+  function show(el){
+    if(!canShow()) return;
+    active=el;
+    titleEl.textContent=el.dataset.title||'';
+    metaEl.textContent=el.dataset.meta||'';
+    var src=el.dataset.thumb;
+    if(src){imgEl.src=src;imgEl.hidden=false;iconEl.style.display='none';}
+    else{imgEl.removeAttribute('src');imgEl.hidden=true;iconEl.style.display='block';}
+    place(el);
+    card.classList.add('is-visible');
+  }
+
+  function hide(){active=null;card.classList.remove('is-visible');}
+
+  document.querySelectorAll('a.project, a.side-row').forEach(function(el){
+    el.addEventListener('mouseenter',function(){show(el);});
+    el.addEventListener('mouseleave',hide);
+    el.addEventListener('focus',function(){show(el);});
+    el.addEventListener('blur',hide);
+  });
+
+  window.addEventListener('scroll',function(){if(active)place(active);},{passive:true});
+  window.addEventListener('resize',function(){if(active){if(!canShow())hide();else place(active);}});
+})();
+</script>

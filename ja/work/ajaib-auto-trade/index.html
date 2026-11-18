@@ -1,0 +1,109 @@
+---
+lang: ja
+translation_key: ajaib-auto-trade
+translation_url: /work/ajaib-auto-trade/
+layout: site
+page_class: cs
+title: Ajaib オートトレード
+description: Ajaibのオートトレード機能を見直し、スムーズな操作体験を実現。
+image: /assets/images/cases/at-cover.png
+noindex: true
+---
+
+<a class="cs-back" href="{{ '/ja/' | relative_url }}">← ホームへ戻る</a>
+<p class="cs-eyebrow">Ajaib • 2022 · リニューアル • モバイル</p>
+<h1 class="cs-title">Ajaibのオートトレード機能を、よりシームレスな体験へ</h1>
+
+<div class="cs-cover" style="aspect-ratio:640/325">
+  <img src="{{ '/assets/images/cases/at-cover.png' | relative_url }}" alt="Ajaib オートトレード" />
+</div>
+
+<dl class="cs-details">
+  <div><dt>役割</dt><dd>プロダクトデザイナー</dd></div>
+  <div><dt>期間</dt><dd>1ヶ月</dd></div>
+  <div><dt>プラットフォーム</dt><dd>Android・iOS</dd></div>
+  <div><dt>チーム</dt><dd>UXライター、プロダクトマネージャー</dd></div>
+</dl>
+
+<article class="cs-article">
+<h2>背景</h2>
+<p>Ajaib Securitiesは、インドネシア最大級の株式トレード・投資プラットフォームの一つです。東南アジアのスタートアップの中でも最速でユニコーン企業となり、わずか2年でその評価額に到達しました。トレーダーや投資家を支えるさまざまな機能・プロダクトの一つとして、以前からオートトレード機能を提供しています。しかし、リリースから1.5年が経過した時点で、オートトレード機能の利用が伸び悩んでいることが分かりました。</p>
+<figure class="fig fig--box" style="--ar:640/447"><img src="{{ '/assets/images/cases/at-background.png' | relative_url }}" alt="" /></figure>
+<h2>Chapter 0. 概要</h2>
+<h3>課題</h3>
+<p>Ajaibのオートトレード機能をリリースしたものの、利用率は10%前後で伸び悩み、機能のコンバージョン率も50%を下回っていました。</p>
+<h3>リサーチとインサイト</h3>
+<div class="defblock"><b>インタビュー</b><p>UIが分かりにくく、表記も紛らわしいため、ユーザーはこの機能を複雑だと感じていた。</p></div>
+<div class="defblock"><b>データ分析</b><p>50%以上のユーザーがこの機能を誤って使用し、意図しない取引につながっていた。</p></div>
+<h3>解決策の概要</h3>
+<div class="defblock"><b>UIの簡素化</b><p>複雑な表記をなくすようにインターフェースを再設計し、価格設定をより簡単にした。</p></div>
+<div class="defblock"><b>ガイド付きオンボーディング</b><p>新規ユーザー向けに、段階的なガイドを導入した。</p></div>
+<figure class="fig fig--box" style="--ar:640/427"><img src="{{ '/assets/images/cases/at-synopsis.jpg' | relative_url }}" alt="" /></figure>
+<h2>Chapter 1. 理解する</h2>
+<h3>リサーチ、インタビュー、データ</h3>
+<p>このプロジェクトはまず、ユーザーがこの機能をどう捉え、プロダクトをどのように使っているのかを理解することから始まりました。仮説を強化するため、3種類のリサーチを実施しました。</p>
+<div class="defblock"><b>開発チームとの対話</b><p>既存ユーザーがオートトレードのルール設定方法に迷っているというインサイトを得た。</p></div>
+<div class="defblock"><b>ユーザーへの直接ヒアリング</b><p>≤や≥といった記号を使ったトリガー価格のルールが分かりにくく、ユーザーが誤ったルール設定でオートトレード注文を出してしまうケースが多いことが分かった。使いやすさに定評のある他のプラットフォームでは、こうした記号は使われていない。</p></div>
+<div class="defblock"><b>データ分析</b><p>プロダクトのリリースから直近までのデータを分析し、ユーザーが普段どのようにトリガー価格のルールを設定しているかを確認した。結果、50%以上のユーザーがトリガー価格を希望する注文価格と同じ値に設定していることが分かった。これは、ユーザーがこの機能を十分に使いこなせておらず、無難な設定を選んでいることを示唆している。</p></div>
+<figure class="fig fig--row fig--stack" style="--ar:640/314;--ar-m:342/656">
+  <span class="is-framed"><img src="{{ '/assets/images/cases/at-data-1.png' | relative_url }}" alt="" /></span>
+  <span class="is-framed"><img src="{{ '/assets/images/cases/at-data-2.png' | relative_url }}" alt="" /></span>
+</figure>
+<div class="defblock"><b>トリガー価格</b><p>プロダクトの初回リリースから直近までのデータを確認したところ、50%以上のユーザーがトリガー価格を希望する注文価格と同じ値に設定していることが分かった。これは、現在のユーザーがこの機能を十分に使いこなせておらず、無難な設定を選んでいるという仮説をさらに裏付けるものだった。</p></div>
+<div class="defblock"><b>指値(注文価格)</b><p>株式を売買したい具体的な価格のことです。買いの場合は支払ってもよい上限の価格、売りの場合は受け入れられる下限の価格を指します。「この価格以下でなければ買わない」「この価格以上でなければ売らない」という条件を指定するようなイメージです。</p></div>
+<h3>課題</h3>
+<p>この機能を利用するユーザーの50%が、適切なトリガールールを設定するスキルを持たないために、トリガー価格を指値(注文価格)と同じ値に設定していました。その結果、注文のコンバージョン率は50%を下回っていました。</p>
+<figure class="fig fig--box fig--show" style="--ar:640/560">
+  <img src="{{ '/assets/images/cases/at-problem-phone.png' | relative_url }}" alt="" style="--h:88.6%" />
+</figure>
+<h2>Chapter 2. 設計</h2>
+<h3>解決策</h3>
+<p>何度もブレインストーミングを重ねた末、私は実験的なアイデアを考案しました。データが示すとおり、ユーザーは≤や≥といった記号による条件設定に苦戦していました。そこで、記号を意識せずに価格を入力できるようにすることで、この部分をシンプルにすることを目指しました。</p>
+<figure class="fig fig--box" style="--ar:640/437"><img src="{{ '/assets/images/cases/at-solutions.png' | relative_url }}" alt="" /></figure>
+<h3>重要なことに集中する</h3>
+<p>トリガー価格のルール設定にユーザーが苦戦しているという仮説がデータによって裏付けられたことで、誰にとっても使いやすい体験にする必要があることが明確になりました。そこで、オートトレードをより簡単にするための2つのステップを用意しました。</p>
+<figure class="fig fig--box fig--show" style="--ar:640/560">
+  <img src="{{ '/assets/images/cases/at-focus.png' | relative_url }}" alt="" style="--h:88.6%" />
+</figure>
+<p class="kicker">解決策 1</p>
+<h3>自動でサポートしてくれるオートトレード</h3>
+<p>これにより、経験の浅いトレーダーでも、オートトレードを効果的に使えるようになりました。希望する注文価格を入力するだけで、あとはすべてシステムが対応します。安心して、自信を持って取引できます。もちろん、これまでどおり自分なりの取引プランを組み立てることも可能で、どのようなタイプのトレーダーにも制限はありません。</p>
+<figure class="fig fig--box fig--show" style="--ar:640/600;--ar-m:342/556">
+  <img src="{{ '/assets/images/cases/at-autotrade.gif' | relative_url }}" alt="" style="--h:89.3%;--r:35px" />
+</figure>
+<h3>トリガー価格の自動生成</h3>
+<p>これまでの常識を変え、オートトレード機能が市場の動きに合わせてトリガー価格を自動生成し、その時々で最適な状況を作り出します。</p>
+<p class="kicker">解決策 2</p>
+<h3>機能だけでなく、分かりやすいガイドも</h3>
+<p>オンボーディングページのコンテンツとレイアウトを再設計し、見た目をより新鮮で魅力的なものにしました。新規ユーザーがオートトレード機能の使い方を理解できるよう、コンテンツ量も大幅に増やしています。</p>
+<figure class="fig fig--box fig--show" style="--ar:640/520">
+  <img src="{{ '/assets/images/cases/at-old-1.png' | relative_url }}" alt="" style="--h:87.7%" />
+  <img src="{{ '/assets/images/cases/at-old-2.png' | relative_url }}" alt="" style="--h:87.7%" />
+</figure>
+<p class="kicker">こちらから</p>
+{% include shots.html tabs="売却・概要|売却・詳細|購入・概要|購入・詳細" files="/assets/images/cases/at-new-1.png|/assets/images/cases/at-new-2.png|/assets/images/cases/at-new-3.png|/assets/images/cases/at-new-4.png" %}
+<p class="kicker">こちらへ。生まれ変わりを見てください🤩</p>
+<h3>取引をサポートするガイド</h3>
+<p>簡単に使えるだけの機能にするのではなく、オートトレードの背後にあるロジックや戦略もきちんと理解してもらいたいと考えました。そこで、用語を分かりやすく説明し、具体的なシナリオを交えてロジックを解説しました。</p>
+<figure class="fig fig--box fig--show" style="--ar:640/600;--ar-m:342/556">
+  <img src="{{ '/assets/images/cases/at-guide.gif' | relative_url }}" alt="" style="--h:89.3%;--r:40px" />
+</figure>
+<h2>Chapter 3. 学び</h2>
+<h3>学んだこと</h3>
+<p>このプロジェクトから、解決策を柔軟に設計することの大切さを学びました。</p>
+<ul>
+  <li>一般的に使われているパターンが、必ずしも最適な解決策とは限りません。このプロジェクトでも、他の株式・暗号資産プラットフォームがオートトレードを実装する際によく使うパターンに従うこともできましたが、それが自分たちのユーザーにとって最適だとは思えませんでした。だからこそ、ユーザーの行動データに基づいた、ユーザー中心の解決策を設計しました。</li>
+  <li>データは心強い味方です。アナリティクスの読み方を身につけておくと、プロセスの至るところで助けになります。このプロジェクトは、私が本格的にアナリティクスを活用し、デザインの意思決定に良い結果を出せた最初の経験でした。</li>
+</ul>
+</article>
+
+<p class="cs-nextlabel">次のプロジェクト</p>
+<a class="cs-next" href="{{ '/ja/work/cicil-checkout/' | relative_url }}">
+  <b>Cicilの新しい価格試算・決済体験</b>
+  <span>cicil.co.id</span>
+</a>
+
+<div class="cs-bottomlinks">
+  <a href="#top" data-top>先頭へ戻る</a>
+  <a href="{{ '/ja/' | relative_url }}">ホームへ戻る</a>
+</div>
