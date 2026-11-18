@@ -73,9 +73,7 @@ img{max-width:100%}
 .header-actions{display:flex;align-items:center;gap:16px}
 .lang-switch{display:flex;align-items:center;gap:6px}
 .lang-link{font-size:14px;font-weight:500;line-height:1.3;color:var(--text-2);text-decoration:none;transition:color .2s ease}
-.lang-link:hover{color:var(--text-1)}
-.lang-link.is-active{color:var(--text-1)}
-.lang-divider{font-size:13px;color:var(--border)}
+.lang-link:hover{color:var(--text-1);text-shadow:0 0 .4px currentColor,0 0 .4px currentColor}
 .theme-toggle{
   width:44px;height:44px;flex:none;border:0;border-radius:999px;background:transparent;
   color:var(--text-2);display:grid;place-items:center;cursor:pointer;

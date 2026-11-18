@@ -1,20 +1,18 @@
 {% assign cur_lang = page.lang | default: "en" %}
 {% if cur_lang == "ja" %}
-  {% assign en_url = page.translation_url | default: "/" %}
-  {% assign ja_url = page.url %}
+  {% assign other_url = page.translation_url | default: "/" %}
+  {% assign other_label = "EN" %}
   {% assign home_url = "/ja/" %}
 {% else %}
-  {% assign en_url = page.url %}
-  {% assign ja_url = page.translation_url | default: "/ja/" %}
+  {% assign other_url = page.translation_url | default: "/ja/" %}
+  {% assign other_label = "日本語" %}
   {% assign home_url = "/" %}
 {% endif %}
 <header class="site-header">
   <a class="brand" href="{{ home_url | relative_url }}"><b>Siry</b><i>シリー</i></a>
   <div class="header-actions">
-    <div class="lang-switch" role="group" aria-label="Language">
-      <a class="lang-link{% if cur_lang == 'en' %} is-active{% endif %}" href="{{ en_url | relative_url }}"{% if cur_lang == 'en' %} aria-current="page"{% endif %}>EN</a>
-      <span class="lang-divider" aria-hidden="true">/</span>
-      <a class="lang-link{% if cur_lang == 'ja' %} is-active{% endif %}" href="{{ ja_url | relative_url }}"{% if cur_lang == 'ja' %} aria-current="page"{% endif %}>日本語</a>
+    <div class="lang-switch">
+      <a class="lang-link" href="{{ other_url | relative_url }}">{{ other_label }}</a>
     </div>
     <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light or dark theme">
       <svg class="icon-moon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
